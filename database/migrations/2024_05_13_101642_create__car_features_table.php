@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_car_features', function (Blueprint $table) {
-            $table->id();
+        Schema::create('car_features', function (Blueprint $table) {
+            $table->id('feature_id');
+            $table->string('feature_name');
             $table->timestamps();
         });
     }

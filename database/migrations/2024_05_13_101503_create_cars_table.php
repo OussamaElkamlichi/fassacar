@@ -12,7 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cars', function (Blueprint $table) {
-            $table->id();
+            $table->id('car_id');
+            $table->integer('seats');
+            $table->enum('transmission', ['automatic', 'manual']);
+            $table->integer('doors');
+            $table->integer('mpg');
+            $table->text('description')->nullable();
+            $table->integer('trips')->default(0);
+            $table->string('make');
+            $table->string('model');
+            $table->year('year');
+            $table->text('features')->nullable();
+            $table->string('type')->nullable();
+            $table->string('color')->nullable();
+            $table->string('license_plate')->unique();
+            $table->boolean('available')->default(true);
             $table->timestamps();
         });
     }

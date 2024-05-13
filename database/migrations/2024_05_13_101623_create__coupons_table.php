@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_coupons', function (Blueprint $table) {
-            $table->id();
+        Schema::create('coupons', function (Blueprint $table) {
+            $table->id('coupon_id');
+            $table->string('coupon_code')->unique();
+            $table->unsignedTinyInteger('discount_percent');
+            $table->dateTime('expiration_date');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_car_features_mapping', function (Blueprint $table) {
-            $table->id();
+        Schema::create('car_features_mapping', function (Blueprint $table) {
+            $table->id('car_feature_relation_id');
+            $table->foreignId('car_id')->constrained('cars');
+            $table->foreignId('feature_id')->constrained('car_features');
             $table->timestamps();
+
+            $table->unique(['car_id', 'feature_id']);
         });
     }
 
