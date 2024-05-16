@@ -16,8 +16,106 @@
         </a>
     </div>
 </div> --}}
+<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+  <div class="md:h-64">
 
-      <main class=" mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+      <video class="absolute inset-0 -z-10 lg:h-full w-full object-cover object-right md:object-center brightness-50"
+          autoplay loop muted>
+          <source src="{{ asset('videos/181537-866999852_small.mp4') }}" type="video/mp4">
+
+      </video>
+  </div>
+
+ 
+
+  <div class=" mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+        <h1>
+          <span class="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">Coming soon</span>
+          <span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
+            <span class="block text-gray-900">Welcome to Fassacar</span>
+            <span class="block text-red-600">Renting cars easily</span>
+          </span>
+        </h1>
+        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+        </p>
+        <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+        
+          <a href="/register">
+            <button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
+              Sign up
+            </button>
+</a>
+         
+        </div>
+      </div>
+      <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+        <svg class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden" width="640" height="784" fill="none" viewBox="0 0 640 784" aria-hidden="true">
+          <defs>
+            <pattern id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e" x="118" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"></rect>
+            </pattern>
+          </defs>
+          <rect y="72" width="640" height="640" class="text-gray-50" fill="currentColor"></rect>
+          <rect x="118" width="404" height="784" fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)"></rect>
+        </svg>
+        <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+          <button type="button" class="relative block w-full bg-black rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <span class="sr-only">Watch our video to learn more</span>
+            <img class="w-full" src="./images/carbg3.jpeg" alt="">
+            <div class="absolute inset-0 w-full h-full flex items-center justify-center" aria-hidden="true">
+              <svg class="h-20 w-20 text-indigo-500" fill="currentColor" viewBox="0 0 84 84">
+                <circle opacity="0.9" cx="42" cy="42" r="42" fill="white"></circle>
+                <path d="M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z"></path>
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2 class="text-4xl font-bold tracking-tight text-black sm:text-6xl">Unlock the key to flexible living with
+              our rental options tailored just for you!</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+              qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+      </div>
+      <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <div
+              class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-black sm:grid-cols-2 md:flex lg:gap-x-10">
+              <a href="#">Open roles <span aria-hidden="true">&rarr;</span></a>
+              <a href="#">Internship program <span aria-hidden="true">&rarr;</span></a>
+              <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
+              <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="flex flex-col-reverse">
+                  <dt class="text-base leading-7 text-gray-600">Offices worldwide</dt>
+                  <dd class="text-2xl font-bold leading-9 tracking-tight text-white">12</dd>
+              </div>
+              <div class="flex flex-col-reverse">
+                  <dt class="text-base leading-7 text-gray-600">Full-time colleagues</dt>
+                  <dd class="text-2xl font-bold leading-9 tracking-tight text-white">300+</dd>
+              </div>
+              <div class="flex flex-col-reverse">
+                  <dt class="text-base leading-7 text-gray-600">Hours per week</dt>
+                  <dd class="text-2xl font-bold leading-9 tracking-tight text-white">40</dd>
+              </div>
+              <div class="flex flex-col-reverse">
+                  <dt class="text-base leading-7 text-gray-600">Paid time off</dt>
+                  <dd class="text-2xl font-bold leading-9 tracking-tight text-white">Unlimited</dd>
+              </div>
+          </dl>
+      </div>
+  </div>
+      {{-- <main class=" mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
         <div class="lg:grid lg:grid-cols-12 lg:gap-8">
           <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <h1>
@@ -31,18 +129,13 @@
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
             </p>
             <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-              <p class="text-base font-medium text-gray-900">
-                Sign up to get notified when it’s ready.
-              </p>
+            
               <a href="/register">
                 <button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
                   Sign up
                 </button>
 </a>
-              <p class="mt-3 text-sm text-gray-500">
-                We care about the protection of your data. Read our
-                <a href="#" class="font-medium text-gray-900 underline">Privacy Policy</a>.
-              </p>
+             
             </div>
           </div>
           <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
@@ -69,7 +162,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </main> --}}
     </div>
   </div>
   <section class="py-24"> 
@@ -80,7 +173,7 @@
                         </div>
                         <div class="py-4 w-full lg:w-6/12">
                             <div class="bg-red-600 lg:-ml-12 lg:pl-12 lg:py-12">
-                                <h2 class="mb-2 text-red-500 text-xl">Rental Cars &amp; Much More</h2>
+                                <h2 class="mb-2 text-black text-xl">Rental Cars &amp; Much More</h2>
                                 <h3 class="capitalize font-bold mb-4 text-4xl text-white xl:text-5xl">Experience a Rental service like never before</h3>
                                 <div class="bg-red-500 mb-6 pb-1 w-2/12"></div>
                                 <p class="mb-6">Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est.</p>

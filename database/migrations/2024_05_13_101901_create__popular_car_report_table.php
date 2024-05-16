@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_popular_car_report', function (Blueprint $table) {
-            $table->id();
+        Schema::create('popular_car_report', function (Blueprint $table) {
+            $table->id('popular_car_id');
+            $table->foreignId('car_id')->constrained('cars', 'car_id');
+            $table->integer('rent_count');
             $table->timestamps();
         });
     }

@@ -11,8 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_reservations', function (Blueprint $table) {
-            $table->id();
+        Schema::create('reservations', function (Blueprint $table) {
+            $table->id('reservation_id');
+            $table->foreignId('user_id')->constrained('users', 'user_id');
+            $table->foreignId('car_id')->constrained('cars', 'car_id');
+            $table->foreignId('coupon_id')->nullable()->constrained('coupons', 'coupon_id');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->string('picking_up_location');
+            $table->string('returning_location'); 
+            $table->decimal('cost', 10, 2);
+            $table->decimal('total_cost', 10, 2);
+            $table->enum('status', ['pending', 'confirmed', 'cancelled']);
+            $table->enum('payment_method', ['credit_card', 'paypal', 'cash']);
             $table->timestamps();
         });
     }

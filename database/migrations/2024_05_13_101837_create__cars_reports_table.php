@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_cars_reports', function (Blueprint $table) {
-            $table->id();
+        Schema::create('cars_reports', function (Blueprint $table) {
+            $table->id('car_report_id');
+            $table->date('date');
+            $table->string('day_name_abbreviation');
+            $table->string('day_name');
+            $table->string('special_date')->nullable();
             $table->timestamps();
         });
     }
