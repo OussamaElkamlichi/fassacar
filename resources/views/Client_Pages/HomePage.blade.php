@@ -5,7 +5,7 @@
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
         <section id="section-hero" aria-label="section" class="jarallax text-light">
-            <img src="images/background/4.jpg" class="jarallax-img" alt="">
+            <img src="{{ asset('client_assets/images/background/4.jpg') }}" class="jarallax-img" alt="">
             <div class="spacer-single sm-hide"></div>
             <div class="spacer-double sm-hide"></div>
             <div class="container">
@@ -13,8 +13,8 @@
 
                     <div class="col-lg-6">
                         <div class="de-images">
-                            <img class="di-small-2" src="images/misc/e2.jpg" alt="">
-                            <img class="di-big img-fluid" src="images/misc/e1.jpg" alt="">
+                            <img class="di-small-2" src="{{ asset('client_assets/images/misc/e2.jpg') }}" alt="">
+                            <img class="di-big img-fluid" src="{{ asset('client_assets/images/misc/e1.jpg') }}" alt="">
                         </div>
                     </div>
 
@@ -71,7 +71,7 @@
                     <div class="col-lg-3">
                         <div class="de-item mb30">
                             <div class="d-img">
-                                <img src="images/cars/jeep-renegade.jpg" class="img-fluid" alt="">
+                                <img src="{{ asset('client_assets/images/cars/jeep-renegade.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="d-info">
                                 <div class="d-text">
@@ -80,10 +80,10 @@
                                         <i class="fa fa-heart"></i><span>21</span>
                                     </div>
                                     <div class="d-atr-group">
-                                        <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                        <span class="d-atr"><img src="images/icons/2-green.svg" alt="">2</span>
-                                        <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
-                                        <span class="d-atr"><img src="images/icons/4-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/1-green.svg') }}" alt="">5</span>
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/2-green.svg') }}" alt="">2</span>
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/3-green.svg') }}" alt="">4</span>
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/4-green.svg') }}"
                                                 alt="">SUV</span>
                                     </div>
                                     <div class="d-price">
@@ -98,7 +98,7 @@
                     <div class="col-lg-3">
                         <div class="de-item mb30">
                             <div class="d-img">
-                                <img src="images/cars/bmw-m5.jpg" class="img-fluid" alt="">
+                                <img src="{{ asset('client_assets/images/cars/bmw-m5.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="d-info">
                                 <div class="d-text">
@@ -107,10 +107,10 @@
                                         <i class="fa fa-heart"></i><span>29</span>
                                     </div>
                                     <div class="d-atr-group">
-                                        <span class="d-atr"><img src="images/icons/1-green.svg" alt="">5</span>
-                                        <span class="d-atr"><img src="images/icons/2-green.svg" alt="">2</span>
-                                        <span class="d-atr"><img src="images/icons/3-green.svg" alt="">4</span>
-                                        <span class="d-atr"><img src="images/icons/4-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/1-green.svg') }}" alt="">5</span>
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/2-green.svg') }}" alt="">2</span>
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/3-green.svg') }}" alt="">4</span>
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/4-green.svg') }}"
                                                 alt="">Sedan</span>
                                     </div>
                                     <div class="d-price">
@@ -125,7 +125,7 @@
                     <div class="col-lg-3">
                         <div class="de-item mb30">
                             <div class="d-img">
-                                <img src="images/cars/ferrari-enzo.jpg" class="img-fluid" alt="">
+                                <img src="{{ asset('client_assets/images/cars/ferrari-enzo.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="d-info">
                                 <div class="d-text">
@@ -134,13 +134,13 @@
                                         <i class="fa fa-heart"></i><span>43</span>
                                     </div>
                                     <div class="d-atr-group">
-                                        <span class="d-atr"><img src="images/icons/1-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/1-green.svg') }}"
                                                 alt="">5</span>
-                                        <span class="d-atr"><img src="images/icons/2-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/2-green.svg') }}"
                                                 alt="">2</span>
-                                        <span class="d-atr"><img src="images/icons/3-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/3-green.svg') }}"
                                                 alt="">4</span>
-                                        <span class="d-atr"><img src="images/icons/4-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/4-green.svg') }}"
                                                 alt="">Exotic Car</span>
                                     </div>
                                     <div class="d-price">
@@ -155,7 +155,7 @@
                     <div class="col-lg-3">
                         <div class="de-item mb30">
                             <div class="d-img">
-                                <img src="images/cars/ford-raptor.jpg" class="img-fluid" alt="">
+                                <img src="{{ asset('client_assets/images/cars/ford-raptor.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="d-info">
                                 <div class="d-text">
@@ -164,13 +164,13 @@
                                         <i class="fa fa-heart"></i><span>57</span>
                                     </div>
                                     <div class="d-atr-group">
-                                        <span class="d-atr"><img src="images/icons/1-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/1-green.svg') }}"
                                                 alt="">5</span>
-                                        <span class="d-atr"><img src="images/icons/2-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/2-green.svg') }}"
                                                 alt="">2</span>
-                                        <span class="d-atr"><img src="images/icons/3-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/3-green.svg') }}"
                                                 alt="">4</span>
-                                        <span class="d-atr"><img src="images/icons/4-green.svg"
+                                        <span class="d-atr"><img src="{{ asset('client_assets/images/icons/4-green.svg') }}"
                                                 alt="">Truck</span>
                                     </div>
                                     <div class="d-price">
@@ -203,7 +203,7 @@
                                     <span class="by">Stepanie Hutchkiss</span>
                                 </blockquote>
                             </div>
-                            <img src="images/testimonial/1.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('client_assets/images/testimonial/1.jpg') }}" class="img-fluid" alt="">
                         </div>
                     </div>
 
@@ -221,7 +221,7 @@
                                     <span class="by">Jovan Reels</span>
                                 </blockquote>
                             </div>
-                            <img src="images/testimonial/2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('client_assets/images/testimonial/2.jpg') }}" class="img-fluid" alt="">
                         </div>
                     </div>
 
@@ -237,7 +237,7 @@
                                     <span class="by">Kanesha Keyton</span>
                                 </blockquote>
                             </div>
-                            <img src="images/testimonial/3.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('client_assets/images/testimonial/3.jpg') }}" class="img-fluid" alt="">
                         </div>
                     </div>
 
@@ -327,7 +327,7 @@
                 </div>
             </div>
 
-            <div class="image-container col-md-6 pull-right" data-bgimage="url(images/background/5.jpg) center"></div>
+            <div class="image-container col-md-6 pull-right" data-bgimage="url(images/background/5.jpg') }}) center"></div>
         </section>
 
         <section id="section-news">
@@ -348,7 +348,7 @@
                                         <div class="m">10</div>
                                         <div class="d">MAR</div>
                                     </div>
-                                    <img alt="" src="images/news/pic-blog-1.jpg" class="lazy">
+                                    <img alt="" src="{{ asset('client_assets/images/news/pic-blog-1.jpg') }}" class="lazy">
                                 </div>
                                 <div class="post-text">
                                     <h4><a href="news-single.html">Enjoy Best Travel Experience<span></span></a></h4>
@@ -368,7 +368,7 @@
                                         <div class="m">12</div>
                                         <div class="d">MAR</div>
                                     </div>
-                                    <img alt="" src="images/news/pic-blog-2.jpg" class="lazy">
+                                    <img alt="" src="{{ asset('client_assets/images/news/pic-blog-2.jpg') }}" class="lazy">
                                 </div>
                                 <div class="post-text">
                                     <h4><a href="news-single.html">The Future of Car Rent<span></span></a></h4>
@@ -388,7 +388,7 @@
                                         <div class="m">14</div>
                                         <div class="d">MAR</div>
                                     </div>
-                                    <img alt="" src="images/news/pic-blog-3.jpg" class="lazy">
+                                    <img alt="" src="{{ asset('client_assets/images/news/pic-blog-3.jpg') }}" class="lazy">
                                 </div>
                                 <div class="post-text">
                                     <h4><a href="news-single.html">Holiday Tips For Backpacker<span></span></a></h4>

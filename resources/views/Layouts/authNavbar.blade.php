@@ -3,7 +3,7 @@
 
 <head>
     <title>Rentaly - Multipurpose Vehicle Car Rental Website Template</title>
-    <link rel="icon" href="{{ asset('client-assets/images/icon.png') }}" type="image/gif" sizes="16x16">
+    <link rel="icon" href="{{ asset('client_assets/images/icon.png') }}" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Rentaly - Multipurpose Vehicle Car Rental Website Template" name="description">
