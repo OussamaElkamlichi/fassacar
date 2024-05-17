@@ -15,4 +15,9 @@ class clientViewsController extends Controller
     {
         return view('Client_Pages.descrptionPage');
     }
+
+    public function showBooking()
+    {
+        return view('Client_Pages.booking');
+    }
 }

@@ -10,3 +10,4 @@ Route::get('/404', function () {
 
 Route::get('/', [clientViewsController::class,'showHome'])->name('home.show');
 Route::get('/details', [clientViewsController::class,'showArticleDescription'])->name('article.description');
+Route::get('/booking', [clientViewsController::class,'showBooking'])->name('booking.show');
