@@ -10,4 +10,9 @@ class clientViewsController extends Controller
     {
         return view('Client_Pages.HomePage');
     }
+
+    public function showArticleDescription()
+    {
+        return view('Client_Pages.descrptionPage');
+    }
 }
