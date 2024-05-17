@@ -16,10 +16,20 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $primaryKey = 'user_id';
+
     protected $fillable = [
-        'name',
+        'username',
+        'password_hash',
         'email',
-        'password',
+        'first_name',
+        'last_name',
+        'phone_number',
+        'address',
+        'town',
+        'post_code',
+        'country',
+        'user_type',
     ];
 
     /**
@@ -43,5 +53,17 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+
+    
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class, 'user_id');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'user_id');
     }
 }

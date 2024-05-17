@@ -2,13 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('landing');
-});
-Route::get('/login', function () {
-    return view('Auth.login');
-});
-Route::get('/register', function () {
-    return view('Auth.register');
-});
+use App\Http\Controllers\clientViewsController;
 
+// Route::get('/', function () {
+//     return view('landing');
+// });
+
+
+Route::get('/', [clientViewsController::class,'showHome'])->name('home.show');
