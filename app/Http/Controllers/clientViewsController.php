@@ -15,4 +15,27 @@ class clientViewsController extends Controller
     {
         return view('Client_Pages.descrptionPage');
     }
+    public function showAccountDashboard()
+    {
+        return view('Client_Pages.accountdashboard');
+    }
+    public function showAccountBooking()
+    {
+        return view('Client_Pages.accountBooking');
+    }
+
+    public function showAccountProfile()
+    {
+        return view('Client_Pages.accountProfile');
+    }
+
+    public function showAccountFavourite()
+    {
+        return view('Client_Pages.accountFavourite');
+    }
+
+    public function showMap()
+    {
+        return view('Client_Pages.map');
+    }
 }

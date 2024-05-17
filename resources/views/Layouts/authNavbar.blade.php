@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('client_assets/css/plugins.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('client_assets/css/style.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('client_assets/css/coloring.css') }}" type="text/css">
-    
+
     <!-- color scheme -->
     <link id="colors" href="{{ asset('client_assets/css/colors/scheme-01.css') }}" rel="stylesheet" type="text/css">
 </head>
@@ -108,15 +108,15 @@
                                             <li><a class="menu-item" href="booking.html">Booking</a>
                                         </ul>
                                         </li>
-                                        <li><a class="menu-item" href="account-dashboard.html">My Account</a>
+                                        <li><a class="menu-item" href="{{ route('account.dashboard') }}">My Account</a>
                                             <ul>
-                                                <li><a class="menu-item" href="account-dashboard.html">Dashboard</a>
+                                                <li><a class="menu-item" href="{{ route('account.dashboard') }}">Dashboard</a>
                                                 </li>
-                                                <li><a class="menu-item" href="account-profile.html">My Profile</a>
+                                                <li><a class="menu-item" href="{{ route('account.profile') }}">My Profile</a>
                                                 </li>
-                                                <li><a class="menu-item" href="account-booking.html">My Orders</a>
+                                                <li><a class="menu-item" href="{{ route('account.booking') }}">My Orders</a>
                                                 </li>
-                                                <li><a class="menu-item" href="account-favorite.html">My Favorite
+                                                <li><a class="menu-item" href="{{ ('account.favourite') }}">My Favorite
                                                         Cars</a></li>
                                             </ul>
                                         </li>
@@ -174,7 +174,7 @@
                                                 </li>
                                                 <li><a class="menu-item" href="icons-font-awesome.html">Icons Font
                                                         Awesome</a></li>
-                                                <li><a class="menu-item" href="map.html">Map</a></li>
+                                                <li><a class="menu-item" href="{{ route('account.map') }}">Map</a></li>
                                                 <li><a class="menu-item" href="modal.html">Modal</a></li>
                                                 <li><a class="menu-item" href="popover.html">Popover</a></li>
                                                 <li><a class="menu-item" href="tabs.html">Tabs</a></li>
@@ -212,7 +212,7 @@
                             <p>Where quality meets affordability. We understand the importance of a smooth and enjoyable journey without the burden of excessive costs. That's why we have meticulously crafted our offerings to provide you with top-notch vehicles at minimum expense.</p>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-3">
                         <div class="widget">
                             <h5>Contact Info</h5>
@@ -252,7 +252,7 @@
                                 <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
                                 <a href="#"><i class="fa fa-rss fa-lg"></i></a>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
