@@ -4,57 +4,308 @@
   <!-- content begin -->
     <div class="no-bottom no-top" id="content">
         <div id="top"></div>
-        <section id="section-hero" aria-label="section" class="jarallax text-light">
-            <img src="{{ asset('client_assets/images/background/4.jpg') }}" class="jarallax-img" alt="">
-            <div class="spacer-single sm-hide"></div>
-            <div class="spacer-double sm-hide"></div>
-            <div class="container">
-                <div class="row">
+        <section id="section-hero" aria-label="section" class="jarallax full-height vertical-center">
+            <img src="{{ asset('client_assets/images/background/1.jpg') }}" class="jarallax-img" alt="">
+            <div class="container position-relative z1000">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-light">
+                        <h4><span class="id-color">Fast and Easy Way to Rent a Car</span></h4>
+                        <div class="spacer-10"></div>
+                        <h1 class="mb-2">Explore the world with comfortable car</h1>
+                        <div class="spacer-10"></div>
+                        <p class="lead">Embark on unforgettable adventures and discover the world in unparalleled comfort and style with our fleet of exceptionally comfortable cars.</p>
+                    </div>
 
                     <div class="col-lg-6">
-                        <div class="de-images">
-                            <img class="di-small-2" src="{{ asset('client_assets/images/misc/e2.jpg') }}" alt="">
-                            <img class="di-big img-fluid" src="{{ asset('client_assets/images/misc/e1.jpg') }}" alt="">
+                        <div class="spacer-single sm-hide"></div>
+                        <div class="p-4 rounded-3 shadow-soft" data-bgcolor="#ffffff">
+                            
+
+                            <form name="contactForm" id='contact_form' method="post">
+                                <h5>What is your vehicle type?</h5>
+
+                                <div class="de_form de_radio row g-3">
+                                    <div class="radio-img col-lg-3 col-sm-3 col-6">
+                                        <input id="radio-1a" name="Car_Type" type="radio" value="Residential" checked="checked">
+                                        <label for="radio-1a"><img src="{{ asset('client_assets/images/select-form/car.png') }}" alt="">Car</label>
+                                    </div>
+
+                                    <div class="radio-img col-lg-3 col-sm-3 col-6">
+                                        <input id="radio-1b" name="Car_Type" type="radio" value="Office">
+                                        <label for="radio-1b"><img src="{{ asset('client_assets/images/select-form/van.png') }}" alt="">Van</label>
+                                    </div>
+
+                                    <div class="radio-img col-lg-3 col-sm-3 col-6">
+                                        <input id="radio-1c" name="Car_Type" type="radio" value="Commercial">
+                                        <label for="radio-1c"><img src="{{ asset('client_assets/images/select-form/minibus.png') }}" alt="">Minibus</label>
+                                    </div>
+
+                                    <div class="radio-img col-lg-3 col-sm-3 col-6">
+                                        <input id="radio-1d" name="Car_Type" type="radio" value="Retail">
+                                        <label for="radio-1d"><img src="{{ asset('client_assets/images/select-form/sportscar.png') }}" alt="">Prestige</label>
+                                    </div>
+                                </div>
+
+                                <div class="spacer-20"></div>
+
+                                <div class="row">
+                                    <div class="col-lg-6 mb20">
+                                        <h5>Pick Up Location</h5>
+                                        <input type="text" name="PickupLocation" onfocus="geolocate()" placeholder="Enter your pickup location" id="autocomplete" autocomplete="off" class="form-control">
+
+                                        <div class="jls-address-preview jls-address-preview--hidden">
+                                            <div class="jls-address-preview__header">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 mb20">
+                                        <h5>Drop Off Location</h5>
+                                        <input type="text" name="DropoffLocation" onfocus="geolocate()" placeholder="Enter your dropoff location" id="autocomplete2" autocomplete="off" class="form-control">
+
+                                        <div class="jls-address-preview jls-address-preview--hidden">
+                                            <div class="jls-address-preview__header">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 mb20">
+                                        <h5>Pick Up Date & Time</h5>
+                                        <div class="date-time-field">
+                                            <input type="text" id="date-picker" name="Pick Up Date" value="">
+                                            <select name="Pick Up Time" id="pickup-time">
+                                                <option selected disabled value="Select time">Time</option>
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                                <option value="02:00">02:00</option>
+                                                <option value="02:30">02:30</option>
+                                                <option value="03:00">03:00</option>
+                                                <option value="03:30">03:30</option>
+                                                <option value="04:00">04:00</option>
+                                                <option value="04:30">04:30</option>
+                                                <option value="05:00">05:00</option>
+                                                <option value="05:30">05:30</option>
+                                                <option value="06:00">06:00</option>
+                                                <option value="06:30">06:30</option>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="12:30">12:30</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="13:30">13:30</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="18:00">18:00</option>
+                                                <option value="18:30">18:30</option>
+                                                <option value="19:00">19:00</option>
+                                                <option value="19:30">19:30</option>
+                                                <option value="20:00">20:00</option>
+                                                <option value="20:30">20:30</option>
+                                                <option value="21:00">21:00</option>
+                                                <option value="21:30">21:30</option>
+                                                <option value="22:00">22:00</option>
+                                                <option value="22:30">22:30</option>
+                                                <option value="23:00">23:00</option>
+                                                <option value="23:30">23:30</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 mb20">
+                                        <h5>Return Date & Time</h5>
+                                        <div class="date-time-field">
+                                            <input type="text" id="date-picker-2" name="Collection Date" value="">
+                                            <select name="Collection Time" id="collection-time">
+                                                <option selected disabled value="Select time">Time</option>
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:30">00:30</option>
+                                                <option value="01:00">01:00</option>
+                                                <option value="01:30">01:30</option>
+                                                <option value="02:00">02:00</option>
+                                                <option value="02:30">02:30</option>
+                                                <option value="03:00">03:00</option>
+                                                <option value="03:30">03:30</option>
+                                                <option value="04:00">04:00</option>
+                                                <option value="04:30">04:30</option>
+                                                <option value="05:00">05:00</option>
+                                                <option value="05:30">05:30</option>
+                                                <option value="06:00">06:00</option>
+                                                <option value="06:30">06:30</option>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="12:30">12:30</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="13:30">13:30</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="18:00">18:00</option>
+                                                <option value="18:30">18:30</option>
+                                                <option value="19:00">19:00</option>
+                                                <option value="19:30">19:30</option>
+                                                <option value="20:00">20:00</option>
+                                                <option value="20:30">20:30</option>
+                                                <option value="21:00">21:00</option>
+                                                <option value="21:30">21:30</option>
+                                                <option value="22:00">22:00</option>
+                                                <option value="22:30">22:30</option>
+                                                <option value="23:00">23:00</option>
+                                                <option value="23:30">23:30</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input type='submit' id='send_message' value='Find a Vehicle' class="btn-main pull-right">
+
+                                <div class="clearfix"></div>
+                                
+                            </form>
                         </div>
                     </div>
-
-                    <div class="col-lg-5 offset-lg-1">
-                        <h5>We Are Rentaly</h5>
-                        <div class="spacer-10"></div>
-                        <h1>We are the <span class="id-color">largest</span> leading commercial and luxury cars rental.
-                        </h1>
-                        <p class="lead">Embark on unforgettable adventures and discover the world in unparalleled
-                            comfort and style with our fleet of exceptionally comfortable cars.</p>
-                        <a class="btn-main" href="#">Choose a Car</a>
-                        <div class="spacer-single"></div>
-
-                        <div class="row">
-                            <div class="col-lg-4 wow fadeInRight mb30" data-wow-delay="1.1s">
-                                <div class="de_count transparent text-left">
-                                    <h3><span>150</span>+</h3>
-                                    <h5 class="id-color">Cars<br>Available</h5>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 wow fadeInRight mb30" data-wow-delay="1.4s">
-                                <div class="de_count transparent text-left">
-                                    <h3><span>48</span>k</h3>
-                                    <h5 class="id-color">Happy<br>Customers</h5>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 wow fadeInRight mb30" data-wow-delay="1.7s">
-                                <div class="de_count transparent text-left">
-                                    <h3><span>15</span></h3>
-                                    <h5 class="id-color">Year<br>Experiences</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                 </div>
             </div>
+
+            <div class="position-absolute d-flex bottom-20">
+              <div class="de-marquee-list style-2">
+                <div class="d-item">
+                  <span class="d-item-txt">SUV</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Hatchback</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Crossover</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Convertible</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Sedan</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Sports Car</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Coupe</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Minivan</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Station Wagon</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Truck</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Minivans</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Exotic Cars</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                 </div>
+              </div>
+
+              <div class="de-marquee-list style-2">
+                <div class="d-item">
+                  <span class="d-item-txt">SUV</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Hatchback</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Crossover</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Convertible</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Sedan</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Sports Car</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Coupe</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Minivan</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Station Wagon</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Truck</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Minivans</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                  <span class="d-item-txt">Exotic Cars</span>
+                  <span class="d-item-display">
+                    <i class="d-item-dot"></i>
+                  </span>
+                 </div>
+              </div>
+            </div>
         </section>
+
 
         <section id="section-cars">
             <div class="container">
