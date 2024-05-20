@@ -74,8 +74,8 @@
                             </div>
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
-                                    <li><a class="menu-item" href="index.html">Home</a>
-                                        <ul>
+                                    <li><a class="menu-item" href="/">Home</a>
+                                        {{-- <ul>
                                             <li><a class="menu-item new" href="02_dark-index-1.html">Homepage 1 Dark</a>
                                             </li>
                                             <li><a class="menu-item new" href="02_dark-index-2.html">Homepage 2 Dark</a>
@@ -86,10 +86,10 @@
                                             <li><a class="menu-item" href="index-4.html">Homepage 4</a></li>
                                             <li><a class="menu-item" href="index-5.html">Homepage 5</a></li>
                                             <li><a class="menu-item" href="index-6.html">Homepage 6</a></li>
-                                        </ul>
+                                        </ul> --}}
                                     </li>
-                                    <li><a class="menu-item" href="cars.html">Cars</a>
-                                        <ul>
+                                    <li><a class="menu-item" href="/carlist">Cars</a>
+                                        {{-- <ul>
                                             <li><a class="menu-item" href="cars.html">Cars List 1</a></li>
                                             <li><a class="menu-item" href="02_dark-cars.html">Cars List 1 Dark</a>
                                             </li>
@@ -99,14 +99,14 @@
                                             <li><a class="menu-item" href="car-single.html">Cars Single</a></li>
                                             <li><a class="menu-item" href="02_dark-car-single.html">Cars Single
                                                     Dark</a></li>
-                                        </ul>
+                                        </ul> --}}
                                     </li>
-                                    <li><a class="menu-item" href="quick-booking.html">Booking</a>
-                                        <ul>
+                                    <li><a class="menu-item" href="/booking">Booking</a>
+                                        {{-- <ul>
                                             <li><a class="menu-item new" href="quick-booking.html">Quick Booking</a>
                                             </li>
                                             <li><a class="menu-item" href="booking.html">Booking</a>
-                                        </ul>
+                                        </ul> --}}
                                         </li>
                                         <li><a class="menu-item" href="account-dashboard.html">My Account</a>
                                             <ul>
@@ -122,14 +122,13 @@
                                         </li>
                                         <li><a class="menu-item" href="#">Pages</a>
                                             <ul>
-                                                <li><a class="menu-item" href="about.html">About Us</a></li>
-                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
-                                                <li><a class="menu-item" href="login.html">Login</a></li>
-                                                <li><a class="menu-item" href="/register">Register</a></li>
-                                                <li><a class="menu-item" href="404.html">Page 404</a></li>
+                                                <li><a class="menu-item" href="/about">About Us</a></li>
+                                                <li><a class="menu-item" href="/contactUs">Contact</a></li>
+                                                <li><a class="menu-item" href="/login">Login</a></li>
+                                                <li><a class="menu-item" href="/404">Page 404</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="menu-item" href="#">News</a>
+                                        {{-- <li><a class="menu-item" href="#">News</a>
                                             <ul>
                                                 <li><a class="menu-item" href="news-standart-right-sidebar.html">News
                                                         Standard</a>
@@ -180,7 +179,7 @@
                                                 <li><a class="menu-item" href="tabs.html">Tabs</a></li>
                                                 <li><a class="menu-item" href="tooltips.html">Tooltips</a></li>
                                             </ul>
-                                        </li>
+                                        </li> --}}
                                 </ul>
                             </div>
                             <div class="de-flex-col">
