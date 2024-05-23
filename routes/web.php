@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\clientViewsController;
 
 Route::get('/404', function () {
@@ -21,3 +22,16 @@ Route::get('/booking', [clientViewsController::class,'showBooking'])->name('book
 Route::get('/contactUs', [clientViewsController::class,'contactUs'])->name('contactUs.show');
 Route::get('/about', [clientViewsController::class,'about'])->name('about.show');
 Route::get('/carlist', [clientViewsController::class,'carlist'])->name('carlist.show');
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Authentification
+|--------------------------------------------------------------------------
+*/
+Route::post('register', [AuthController::class, 'register'])->name('register');
+Route::post('login', [AuthController::class, 'login'])->name('login');
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+

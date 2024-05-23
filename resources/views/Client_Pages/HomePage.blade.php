@@ -578,7 +578,7 @@
                 </div>
             </div>
 
-            <div class="image-container col-md-6 pull-right" data-bgimage="url(images/background/5.jpg') }}) center"></div>
+            <div class="image-container col-md-6 pull-right" data-bgimage="url({{ asset('client_assets/images/background/5.jpg') }}) center"></div>
         </section>
 
         <section id="section-news">

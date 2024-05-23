@@ -125,6 +125,7 @@
                                                 <li><a class="menu-item" href="/about">About Us</a></li>
                                                 <li><a class="menu-item" href="/contactUs">Contact</a></li>
                                                 <li><a class="menu-item" href="/login">Login</a></li>
+                                                <li><a class="menu-item" href="/register">Register</a></li>
                                                 <li><a class="menu-item" href="/404">Page 404</a></li>
                                             </ul>
                                         </li>
@@ -184,7 +185,7 @@
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
-                                    <a href="/" class="btn-main">Sign In</a>
+                                    <a href="/login" class="btn-main">Sign In</a>
                                     <span id="menu-btn"></span>
                                 </div>
                             </div>
