@@ -29,8 +29,6 @@ Route::get('/booking', [clientViewsController::class,'showBooking'])->name('book
 Route::get('/contactUs', [clientViewsController::class,'contactUs'])->name('contactUs.show');
 Route::get('/about', [clientViewsController::class,'about'])->name('about.show');
 Route::get('/carlist', [clientViewsController::class,'carlist'])->name('carlist.show');
-<<<<<<< Updated upstream
-
 
 
 
@@ -43,7 +41,12 @@ Route::post('register', [AuthController::class, 'register'])->name('register');
 Route::post('login', [AuthController::class, 'login'])->name('login');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-=======
+
+
+/*
+|--------------------------------------------------------------------------
+| Admin
+|--------------------------------------------------------------------------
+*/
 Route::get('/dashboard', [clientViewsController::class,'dash'])->name('dash.show');
 Route::get('/create', [clientViewsController::class,'create'])->name('create');
->>>>>>> Stashed changes

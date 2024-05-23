@@ -8,16 +8,7 @@ use App\Models\Car;
 class CarController extends Controller
 {
   
-    public function dashboard(){
-
-        return view('admin.dashboard');
-   }
-  
-   public function create_form(){
-         
-         return view('admin.create_form');
-
-   }
+   
 
    public function create(Request $request){
 

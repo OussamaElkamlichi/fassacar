@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('town');
             $table->string('post_code');
             $table->string('country');
-            $table->enum('user_type', ['admin', 'customer', 'other']);
             $table->timestamps();
         });
 

@@ -36,12 +36,5 @@ class clientViewsController extends Controller
         return view('Client_Pages.carlist');
     } 
 
-    public function dash()
-    {
-        return view('admin.dashboard');
-    } 
-    public function create()
-    {
-        return view('admin.create');
-    } 
+  
 }
