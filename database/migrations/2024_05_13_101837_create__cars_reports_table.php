@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('car_reports', function (Blueprint $table) {
-            $table->id('car_report_id');
+            $table->id();
+
             $table->date('date');
             $table->string('day_name_abbreviation');
             $table->string('day_name');

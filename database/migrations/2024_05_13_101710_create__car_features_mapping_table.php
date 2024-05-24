@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('car_features_mapping', function (Blueprint $table) {
-            $table->id('car_feature_relation_id');
+            $table->id();
+
             $table->foreignId('car_id')->constrained('cars');
             $table->foreignId('feature_id')->constrained('car_features');
             $table->timestamps();

@@ -13,7 +13,8 @@ return new class extends Migration
     { 
         Schema::create('reviews', function (Blueprint $table) {
        
-        $table->id('review_id');
+            $table->id();
+
         $table->foreignId('user_id')->constrained('users');
         $table->foreignId('car_id')->constrained('cars');
         $table->unsignedTinyInteger('rating');
