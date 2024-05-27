@@ -183,7 +183,9 @@
 
                 <div class="col-lg-9">
                     <div class="row">
-
+   @foreach($cars as $car)
+    
+ 
                         <div class="col-lg-12">
                             <div class="de-item-list mb30">
                                 <div class="d-img">
@@ -194,356 +196,29 @@
                                         <h4>Jeep Renegade</h4>
                                         <div class="d-atr-group">
                                             <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
+                                                <li><span>Seats:</span>{{$car->seats }}</li>
+                                                <li><span>Luggage:</span>{{$car->luggage }}</li>
+                                                <li><span>Doors:</span>{{$car->doors }}</li>
+                                                <li><span>Fuel:</span>{{$car->fuel }}</li>
+                                                <li><span>Body type:</span>{{$car->body_type }}</li>
+                                                <li><span>color:</span>{{$car->color }}</li>
+                                                <li><span>Aviable:</span>{{$car->aviable }}</li>
+                                                <li><span>Type:</span>{{$car->type }}</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-price">
-                                    Daily rate from <span>$265</span>
+                                    Daily rate from <span>${{$car->price}}</span>
                                     <a class="btn-main" href="car-single.html">Rent Now</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
+  @endforeach
+                   
 
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/bmw-m5.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Mini Cooper</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$244</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
 
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/ferrari-enzo.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Ferarri Enzo</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$167</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/ford-raptor.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Ford Raptor</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$147</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/mini-cooper.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Mini Cooper</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$238</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/vw-polo.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>VW Polo</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$106</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/chevrolet-camaro.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Chevrolet Camaro</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$245</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/hyundai-staria.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Hyundai Staria</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$191</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/toyota-rav.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Toyota Rav 4</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$114</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/bentley.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Bentley</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$299</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/lexus.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Lexus</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$131</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="de-item-list mb30">
-                                <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/range-rover.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="d-info">
-                                    <div class="d-text">
-                                        <h4>Range Rover</h4>
-                                        <div class="d-atr-group">
-                                            <ul class="d-atr">
-                                                <li><span>Seats:</span>4</li>
-                                                <li><span>Luggage:</span>2</li>
-                                                <li><span>Doors:</span>4</li>
-                                                <li><span>Fuel:</span>Petrol</li>
-                                                <li><span>Horsepower:</span>500</li>
-                                                <li><span>Engine:</span>3000</li>
-                                                <li><span>Drive:</span>4x4</li>
-                                                <li><span>Type:</span>Hatchback</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-price">
-                                    Daily rate from <span>$228</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
 
                         
 

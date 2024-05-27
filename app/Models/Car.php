@@ -16,17 +16,16 @@ class Car extends Model
         'seats',
         'transmission',
         'doors',
-        'mpg',
+        'fuel',
         'description',
-        'trips',
-        'make',
         'model',
+        'body_type',
         'year',
-        'features',
         'type',
         'color',
-        'license_plate',
+        'luggage',
         'available',
+        'price'
     ];
 
     public function reservations()
@@ -43,4 +42,22 @@ class Car extends Model
     {
         return $this->belongsToMany(CarFeature::class, 'car_features_mapping', 'car_id', 'feature_id');
     }
+
+
+    public static function getTransmissionOptions()
+    {
+        return [
+            'automatic' => 'Automatic',
+            'manual' => 'Manual',
+        ];
+    }
+
+    public static function getFuelOptions()
+    {
+        return [
+            'petrol' => 'Petrol',
+            'gasual' => 'Gasual',
+        ];
+    }
 }
+

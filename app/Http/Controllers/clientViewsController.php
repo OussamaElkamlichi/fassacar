@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Car;
 use Illuminate\Http\Request;
 
 class clientViewsController extends Controller
@@ -36,5 +36,10 @@ class clientViewsController extends Controller
         return view('Client_Pages.carlist');
     } 
 
+    public function show(){
+        $cars = car::all();
+         return view('Client_Pages.carlist',compact('cars'));
+    
+       }
   
 }

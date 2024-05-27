@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Car;
 use Illuminate\Http\Request;
 
 class AdminViewsController extends Controller
@@ -13,7 +13,11 @@ class AdminViewsController extends Controller
   
    public function create_form(){
          
-         return view('admin.create_form');
+    $transmissionOptions = Car::getTransmissionOptions();
+    $fuelOptions = Car::getFuelOptions();
+
+    return view('admin.create', compact('transmissionOptions', 'fuelOptions'));
+
 
    }
 }
