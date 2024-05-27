@@ -12,18 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id('user_id');
+            $table->id();
             $table->string('username')->unique();
-            $table->string('password_hash')->nullable();
-            $table->string('email')->unique()->nullable();
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('password');
+            $table->string('email')->unique();
+            $table->string('full_name');
             $table->string('phone_number');
+            $table->unsignedBigInteger('city');
             $table->string('address');
-            $table->string('town');
-            $table->string('post_code');
-            $table->string('country');
+            // $table->string('town');
+            // $table->string('post_code');
             $table->timestamps();
+
+            $table->foreign('city')->references('id')->on('cities');
+
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
@@ -33,7 +35,7 @@ return new class extends Migration
         });
 
         Schema::create('sessions', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->string('id')-> primary();
             $table->foreignId('user_id')->nullable()->index();
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
