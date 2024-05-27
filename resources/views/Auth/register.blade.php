@@ -49,7 +49,12 @@
                                 <div class="col-md-6">
                                     <div class="field-set">
                                         <label>City :</label>
-                                        <input type='text' name='city' id='name' class="form-control">
+                                        <select  class="form-control" name="city">
+                                            <option disabled>Enter ur City</option>
+                                            @foreach ($cities as $city)
+                                                <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     @error('city')
                                         <p class="text-danger">{{ $message }}</p>
@@ -121,18 +126,15 @@
 
                                 <div class="col-md-12">
 
-                                    <div id='submit' class="pull-left">
-                                        <input type='submit' id='send_message' value='Register Now'
-                                            class="btn-main color-2">
+                                    <div id='submit' class="pull-left" style="background-color: rgb(37, 157, 37)">
+                                        <input type='submit' id='send_message' value='Register Now' class="btn-main color-2">
                                     </div>
 
                                     <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                    <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.
-                                    </div>
+                                    <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
                                     <div class="clearfix"></div>
 
                                 </div>
-
                             </div>
                         </form>
 

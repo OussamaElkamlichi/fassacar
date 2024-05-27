@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('phone_number');
             $table->unsignedBigInteger('city');
             $table->string('address');
+            $table->enum('user_type', ['admin', 'client'])->default('client');
             // $table->string('town');
             // $table->string('post_code');
             $table->timestamps();

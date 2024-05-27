@@ -11,11 +11,9 @@ Route::get('/404', function () {
     return view('404');
 });
 Route::get('/login', function () {
-    return view('auth.login')->name('login');
+    return view('Auth.login');
 });
-Route::get('/register', function () {
-    return view('auth.register')->name('register');
-});
+Route::get('/register', [AuthController::class,'registerShow'])->name('register.show');
 // Route::get('/dashboard', function () {
 //     return view('admin.dashboard')->name('dash');
 // });
