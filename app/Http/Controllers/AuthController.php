@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Cities;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -58,6 +59,23 @@ class AuthController extends Controller
 
         return redirect()->back()->with('success', "ajoute avec succes");
 
+    }
+
+
+    public function login(Request $request)
+    {
+        $credentials = request(['email', 'password']);
+
+        if (Auth::attempt($credentials, $request->filled('remember'))) {
+            $request->session()->regenerate();
+    
+            return redirect()->route('homePage');
+        }   
+        
+        return back()->withErrors([
+            'email' => 'Invalid email or password',
+        ]);
+        
     }
 
 }
