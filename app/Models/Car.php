@@ -10,7 +10,8 @@ class Car extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'car_id';
+    protected $primaryKey = 'id';
+
 
     protected $fillable = [
         'seats',

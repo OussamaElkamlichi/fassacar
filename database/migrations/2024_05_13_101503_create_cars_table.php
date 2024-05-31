@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cars', function (Blueprint $table) {
-            $table->id();
 
+           $table->id(); // Corrected the primary key definition
             $table->integer('seats');
             $table->enum('transmission', ['automatic', 'manual']);
             $table->integer('doors');

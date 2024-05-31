@@ -10,21 +10,18 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    { 
+    {
         Schema::create('reviews', function (Blueprint $table) {
-       
-            $table->id();
+            $table->bigIncrements('id'); // Use bigIncrements instead of id()
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Add onDelete('cascade')
+            $table->foreignId('car_id')->constrained()->onDelete('cascade'); // Add onDelete('cascade')
+            $table->unsignedTinyInteger('rating');
+            $table->text('comment')->nullable();
+            $table->dateTime('review_date');
+            $table->timestamps();
 
-        $table->foreignId('user_id')->constrained('users');
-        $table->foreignId('car_id')->constrained('cars');
-        $table->unsignedTinyInteger('rating');
-        $table->text('comment')->nullable();
-        $table->dateTime('review_date');
-        $table->timestamps();
-
-        $table->index('user_id');
-        $table->index('car_id');
-    });
+            // No need to manually create indexes, they will be created automatically for foreign keys
+        });
     }
 
     /**
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_reviews');
+        Schema::dropIfExists('reviews'); // Correctly drop the 'reviews' table
     }
 };

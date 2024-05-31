@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\clientViewsController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\AdminViewsController;
+use App\Http\Controllers\ReservationController;
 
 Route::get('/404', function () {
     return view('404');
@@ -51,3 +52,7 @@ Route::get('/dashboard', [AdminViewsController::class,'dashboard'])->name('dash.
 Route::get('/create', [AdminViewsController::class,'create_form'])->name('create.form');
 Route::post('/create', [CarController::class,'create'])->name('create');
 
+Route::post('/reservations', [ReservationController::class, 'store'])->name('reservations.store');
+Route::get('/reservations/{id}', [ReservationController::class, 'show'])->name('reservations.show');
+Route::get('reservations/create/{car}', [ReservationController::class, 'create'])->name('reservations.create');
+Route::get('/test-insert', [ReservationController::class, 'testInsert']);
