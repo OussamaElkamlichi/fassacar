@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\clientViewsController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SocialController;
 use App\Http\Controllers\AdminViewsController;
+use App\Http\Controllers\clientViewsController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\Auth\SocialLoginController;
 
 Route::get('/404', function () {
     return view('404');
@@ -15,12 +17,12 @@ Route::get('/login', function () {
     return view('Auth.login');
 });
 Route::get('/register', [AuthController::class,'registerShow'])->name('register.show');
-// Route::get('/dashboard', function () {
-//     return view('admin.dashboard')->name('dash');
-// });
-// Route::get('/create', function () {
-//     return view('admin.create')->name('create');
-// });
+
+Route::get('auth/{provider}/redirect',[SocialLoginController::class,'redirect'])->name('redirect');
+Route::get('auth/{provider}/callback',[SocialLoginController::class,'callback'])->name('callback');
+
+Route::get('auth/{provider}/user',[SocialController::class,'index']);
+
 
 
 Route::get('/', [clientViewsController::class,'showHome'])->name('home.show');
@@ -56,3 +58,5 @@ Route::post('/reservations', [ReservationController::class, 'store'])->name('res
 Route::get('/reservations/{id}', [ReservationController::class, 'show'])->name('reservations.show');
 Route::get('reservations/create/{car}', [ReservationController::class, 'create'])->name('reservations.create');
 Route::get('/test-insert', [ReservationController::class, 'testInsert']);
+
+

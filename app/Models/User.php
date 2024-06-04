@@ -3,9 +3,10 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -16,7 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'username',
@@ -27,6 +28,9 @@ class User extends Authenticatable
         'address',
         'city',
         'user_type',
+        'provider',
+        'provider_id',
+        'provider_token',
     ];
 
     /**
@@ -37,6 +41,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'provider_token',
     ];
 
     /**
@@ -52,8 +57,17 @@ class User extends Authenticatable
         ];
     }
 
+    public function setProviderTokenAttribute($value)
+    {
+        $this->attributes['provider_token'] = Crypt::encryptString($value);
+    }
 
-    
+    public function getProviderTokenAttribute($value)
+    {
+        return Crypt::decryptString($value);
+    }
+
+    // Autres relations et méthodes du modèle
     public function reservations()
     {
         return $this->hasMany(Reservation::class, 'user_id');

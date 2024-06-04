@@ -26,22 +26,20 @@
                                             placeholder="Your Password" />
                                     </div>
                                     <div id="submit">
-                                        <input type="submit" id="send_message" value="Sign In"
+                                        <input type="submit" id="send_message" value="Sign In" style="background-color: rgb(37, 157, 37)"
                                             class="btn-main btn-fullwidth rounded-3" />
                                     </div>
                                 </form>
                                 <div class="title-line">Or&nbsp;sign&nbsp;up&nbsp;with</div>
-                                <div class="row g-2">
-                                    <div class="col-lg-6">
-                                        <a class="btn-sc btn-fullwidth mb10" href="#"><img
+                                <div class="d-flex">
+                                        <a class="btn-sc btn-fullwidth " href="{{ route('redirect','google') }}"><img
                                                 src="{{ asset('client_assets/images/svg/google_icon.svg') }}"
                                                 alt="">Google</a>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <a class="btn-sc btn-fullwidth mb10" href="#"><img
+                                    {{-- <div class="col-lg-6">
+                                        <a class="btn-sc btn-fullwidth mb10" href="{{ route('redirect','facebook') }}"><img
                                                 src="{{ asset('client_assets/images/svg/facebook_icon.svg') }}"
                                                 alt="">Facebook</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
