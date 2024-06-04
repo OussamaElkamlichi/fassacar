@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class clientViewsController extends Controller
 {
@@ -41,5 +42,12 @@ class clientViewsController extends Controller
          return view('Client_Pages.carlist',compact('cars'));
     
        }
+
+    
+    public function myAccount()
+    {
+        $me = Auth::user();
+        return view('Client_Pages.myAccount', compact('me'));
+    }
   
 }

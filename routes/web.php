@@ -13,15 +13,6 @@ use App\Http\Controllers\Auth\SocialLoginController;
 Route::get('/404', function () {
     return view('404');
 });
-Route::get('/login', function () {
-    return view('Auth.login');
-});
-Route::get('/register', [AuthController::class,'registerShow'])->name('register.show');
-
-Route::get('auth/{provider}/redirect',[SocialLoginController::class,'redirect'])->name('redirect');
-Route::get('auth/{provider}/callback',[SocialLoginController::class,'callback'])->name('callback');
-
-Route::get('auth/{provider}/user',[SocialController::class,'index']);
 
 
 
@@ -31,6 +22,7 @@ Route::get('/booking', [clientViewsController::class,'showBooking'])->name('book
 Route::get('/contactUs', [clientViewsController::class,'contactUs'])->name('contactUs.show');
 Route::get('/about', [clientViewsController::class,'about'])->name('about.show');
 Route::get('/carlist', [clientViewsController::class,'show'])->name('carlist.show');
+Route::get('/myAccount', [clientViewsController::class,'myAccount'])->name('myAccount.show');
 
 
 
@@ -42,6 +34,18 @@ Route::get('/carlist', [clientViewsController::class,'show'])->name('carlist.sho
 Route::post('register', [AuthController::class, 'register'])->name('register');
 Route::post('login', [AuthController::class, 'login'])->name('login');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
+
+Route::get('/login', function () {
+    return view('Auth.login');
+});
+Route::get('/register', [AuthController::class,'registerShow'])->name('register.show');
+
+Route::get('auth/{provider}/redirect',[SocialLoginController::class,'redirect'])->name('redirect');
+Route::get('auth/{provider}/callback',[SocialLoginController::class,'callback'])->name('callback');
+
+Route::get('auth/{provider}/user',[SocialController::class,'index']);
+
 
 
 
