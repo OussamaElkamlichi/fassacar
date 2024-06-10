@@ -19,9 +19,11 @@ class LanguageController extends Controller
     public function yourMethod(Request $request)
     {
         // Get the 'locale' parameter from the request, default to 'es' if not provided
+
+
         $locale = $request->input('locale', 'es');
 
-        // Set the application's locale based on the 'locale' parameter
+        // Set the application's locale bas ed on the 'locale' parameter
         app()->setLocale($locale);
 
         // Your controller logic here...
