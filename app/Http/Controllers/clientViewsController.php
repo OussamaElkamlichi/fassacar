@@ -34,5 +34,15 @@ class clientViewsController extends Controller
     public function carlist()
     {
         return view('Client_Pages.carlist');
-    } 
+    }
+
+    public function showRegistrationForm()
+    {
+        return view('Auth.register');
+    }
+
+    public function showMap()
+    {
+        return view('Client_Pages.map');
+    }
 }

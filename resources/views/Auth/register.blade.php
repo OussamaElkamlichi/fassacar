@@ -3,7 +3,7 @@
 
 <div class="no-bottom no-top" id="content">
     <div id="top"></div>
-    
+
     <!-- section begin -->
     <section id="subheader" class="jarallax text-light">
         <img src="{{ asset('client_assets/images/background/2.jpg') }}" class="jarallax-img" alt="">
@@ -19,7 +19,7 @@
             </div>
     </section>
     <!-- section close -->
-    
+
 
     <section aria-label="section">
         <div class="container">
@@ -27,9 +27,9 @@
                 <div class="col-md-8 offset-md-2">
                     <h3>Don't have an account? Register now.</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    
+
                     <div class="spacer-10"></div>
-                    
+
                     <form name="contactForm" id='contact_form' class="form-border" method="post" action='blank.php'>
 
                         <div class="row">
@@ -91,13 +91,13 @@
 
                         </div>
                     </form>
-                    
+
                 </div>
             </div>
         </div>
     </section>
-    
-    
+    <h1>{{ trans('messages.welcome') }}</h1>
+
 </div>
 
 @endsection

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <title>Rentaly - Multipurpose Vehicle Car Rental Website Template</title>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('client_assets/css/plugins.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('client_assets/css/style.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('client_assets/css/coloring.css') }}" type="text/css">
-    
+
     <!-- color scheme -->
     <link id="colors" href="{{ asset('client_assets/css/colors/scheme-01.css') }}" rel="stylesheet" type="text/css">
 </head>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
-                                    <li><a class="menu-item" href="index.html">Home</a>
+                                    <li><a class="menu-item" href="index.html">@lang('messages.home')</a>
                                         <ul>
                                             <li><a class="menu-item new" href="02_dark-index-1.html">Homepage 1 Dark</a>
                                             </li>
@@ -88,7 +88,7 @@
                                             <li><a class="menu-item" href="index-6.html">Homepage 6</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="cars.html">Cars</a>
+                                    <li><a class="menu-item" href="cars.html">@lang('messages.cars')</a>
                                         <ul>
                                             <li><a class="menu-item" href="cars.html">Cars List 1</a></li>
                                             <li><a class="menu-item" href="02_dark-cars.html">Cars List 1 Dark</a>
@@ -101,14 +101,14 @@
                                                     Dark</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="quick-booking.html">Booking</a>
+                                    <li><a class="menu-item" href="quick-booking.html">@lang('messages.booking')</a>
                                         <ul>
                                             <li><a class="menu-item new" href="quick-booking.html">Quick Booking</a>
                                             </li>
                                             <li><a class="menu-item" href="booking.html">Booking</a>
                                         </ul>
                                         </li>
-                                        <li><a class="menu-item" href="account-dashboard.html">My Account</a>
+                                        <li><a class="menu-item" href="account-dashboard.html">My account</a>
                                             <ul>
                                                 <li><a class="menu-item" href="account-dashboard.html">Dashboard</a>
                                                 </li>
@@ -120,7 +120,7 @@
                                                         Cars</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="menu-item" href="#">Pages</a>
+                                        <li><a class="menu-item" href="#">@lang('messages.pages')</a>
                                             <ul>
                                                 <li><a class="menu-item" href="about.html">About Us</a></li>
                                                 <li><a class="menu-item" href="contact.html">Contact</a></li>
@@ -129,7 +129,7 @@
                                                 <li><a class="menu-item" href="404.html">Page 404</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="menu-item" href="#">News</a>
+                                        <li><a class="menu-item" href="#">@lang('messages.news')</a>
                                             <ul>
                                                 <li><a class="menu-item" href="news-standart-right-sidebar.html">News
                                                         Standard</a>
@@ -160,7 +160,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a class="menu-item" href="#">Elements</a>
+                                        <li><a class="menu-item" href="#">@lang('messages.elements')</a>
                                             <ul>
                                                 <li><a class="menu-item" href="preloader.html">Preloader</a></li>
                                                 <li><a class="menu-item" href="icon-boxes.html">Icon Boxes</a></li>
@@ -185,7 +185,7 @@
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
-                                    <a href="/" class="btn-main">Sign In</a>
+                                    <a href="/" class="btn-main">@lang('messages.sign In')</a>
                                     <span id="menu-btn"></span>
                                 </div>
                             </div>
@@ -193,6 +193,21 @@
                     </div>
                 </div>
             </div>
+
+            {{-- <select onchange="location = this.value;">
+                <option value="{{ route('lang.switch', 'en') }}" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>English</option>
+                <option value="{{ route('lang.switch', 'es') }}" {{ app()->getLocale() == 'es' ? 'selected' : '' }}>Spanish</option>
+
+
+            </select> --}}
+            <!-- Navigation Bar -->
+            <nav>
+                <ul>
+                    <li><a href="{{ route('language.switch', 'en') }}">English</a></li>
+                    <li><a href="{{ route('language.switch', 'es') }}">Spanish</a></li>
+                </ul>
+            </nav>
+
         </header>
         <!-- header close -->
 
@@ -212,7 +227,7 @@
                             <p>Where quality meets affordability. We understand the importance of a smooth and enjoyable journey without the burden of excessive costs. That's why we have meticulously crafted our offerings to provide you with top-notch vehicles at minimum expense.</p>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-3">
                         <div class="widget">
                             <h5>Contact Info</h5>
@@ -252,7 +267,7 @@
                                 <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
                                 <a href="#"><i class="fa fa-rss fa-lg"></i></a>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
