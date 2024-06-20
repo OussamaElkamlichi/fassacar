@@ -1,6 +1,6 @@
 
-@extends('admin.layout')
-@section('Content')
+@extends('Layouts.adminLayout')
+@section('adminContent')
 
 
     <div class="container  mx-auto px-2">        
@@ -539,4 +539,5 @@
     
     </div> --}}
 
-    @endsection 
+
+@endsection

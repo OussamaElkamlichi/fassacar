@@ -4,7 +4,7 @@
 <!-- content begin -->
 <div class="no-bottom no-top zebra" id="content">
     <div id="top"></div>
-    
+
     <!-- section begin -->
     <section id="subheader" class="jarallax text-light">
         <img src="{{asset('client_assets/images/background/2.jpg')}}" class="jarallax-img" alt="">
@@ -184,8 +184,8 @@
                 <div class="col-lg-9">
                     <div class="row">
    @foreach($cars as $car)
-    
- 
+
+
                         <div class="col-lg-12">
                             <div class="de-item-list mb30">
                                 <div class="d-img">
@@ -211,24 +211,25 @@
                                 <div class="d-price">
                                     Daily rate from <span>{{$car->price}} MAD</span>
                                     <a href="{{ route('details', ['id' => $car->id]) }}" class="btn-main" >Read more</a>
+
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
   @endforeach
-                   
 
 
 
-                        
+
+
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    
+
+
 </div>
 
 @endsection

@@ -26,7 +26,6 @@
     
 <body data-layout-mode="light" class="bg-gray-100 dark:bg-gray-900 bg-[url('../images/bg-body.png')] dark:bg-[url('../images/bg-body-2.png')]">
 
-
     <div class="sm:col-span-12  md:col-span-12 lg:col-span-12 xl:col-span-12 ">
         <div class="card">
             <div class="card-body">
@@ -91,14 +90,13 @@
                   </nav>
             </div><!--end card-body-->
         </div> <!--end card-->
-    </div> 
+    </div><!--end col-->  
 
 
+    @yield('Content')
 
-    @yield('adminContent')
 
-
-    {{-- <div class="absolute bottom-0 left-2 right-2 block print:hidden">
+    <div class="absolute bottom-0 left-2 right-2 block print:hidden">
         <div class="container mx-auto">
           <!-- Footer Start -->
           <footer
@@ -116,6 +114,5 @@
           </footer>
           <!-- end Footer -->
         </div>
-      </div> --}}
+      </div>
 
-</body>

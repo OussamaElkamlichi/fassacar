@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
-use Illuminate\Validation\Rule; 
+use Illuminate\Validation\Rule;
 
 class CarController extends Controller
 {
-  
-  
+
+
 
    public function create(Request $request){
-    
+
     $transmissionOptions = Car::getTransmissionOptions();
     $fuelOptions = Car::getFuelOptions();
-  
+
     // dd($request);
 try{
     $request->validate([
@@ -34,7 +34,7 @@ try{
         'price' => ['nullable', 'numeric', 'min:0'],
         'image' => ['required', 'file'], 
     ]);
-    
+
     // $user = auth()->user();
 
     $imageName = null;
@@ -63,7 +63,7 @@ try{
         'price' => $request->price,
         'image' => $imageName, 
     ]);
-    
+
 
         return redirect()->route('dash.stat');
 

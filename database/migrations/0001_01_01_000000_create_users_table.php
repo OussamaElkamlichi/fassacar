@@ -13,13 +13,21 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('fullname');
-            $table->string('password_hash')->nullable();
-            $table->string('email')->unique()->nullable();
-            $table->string('phone_number');
-            $table->string('address');
-            $table->string('city');
+
+            $table->string('username')->unique()->nullable();
+            $table->string('password');
+            $table->string('email')->unique();
+            $table->string('full_name');
+            $table->string('picture')->nullable()->default('anonyme.png');
+            $table->string('phone_number')->nullable();
+            $table->unsignedBigInteger('city')->nullable();
+            $table->string('address')->nullable();
+            $table->enum('user_type', ['admin', 'client'])->default('client');
+            $table->string('remember_token')->nullable();
             $table->timestamps();
+
+            $table->foreign('city')->references('id')->on('cities');
+
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
@@ -29,7 +37,7 @@ return new class extends Migration
         });
 
         Schema::create('sessions', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->string('id')-> primary();
             $table->foreignId('user_id')->nullable()->index();
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();

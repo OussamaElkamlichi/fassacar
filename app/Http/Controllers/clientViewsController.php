@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class clientViewsController extends Controller
 {
@@ -46,5 +47,6 @@ class clientViewsController extends Controller
         $car = Car::findOrFail($id);
         // dd($car);
         return view('Client_Pages.descrptionPage',compact('car'));
+
     }
 }

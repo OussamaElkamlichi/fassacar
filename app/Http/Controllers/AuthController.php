@@ -2,19 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Cities;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    public function registerShow()
+    {
+        $cities = Cities::all();
+        // dd($cities);
+
+        return view('Auth.register',['cities' => $cities]);
+    }
+
     public function register(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
             'adress' => 'required',
-            'phone' => 'required|integer',
+            'phone' => 'required|numeric|digits_between:10,15',
             'city' => 'required|integer',
+            'picture' => 'required',
             'username' => ['required', 'string', 'max:255', Rule::unique('users', 'username')],
             'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users', 'email')],
             'password' => 'required|string|min:8|confirmed',
@@ -23,7 +34,7 @@ class AuthController extends Controller
             'name.string' => 'Le nom doit être une chaîne de caractères.',
             'name.max' => 'Le nom ne peut pas dépasser 255 caractères.',
             'phone.required' => 'Le numéro de téléphone est obligatoire.',
-            'phone.integer' => 'Le numéro de téléphone doit être un entier.',
+            'picture.required' => "La photo d'utilisateur est obligatoire.",
             'username.required' => "Le nom d'utilisateur est obligatoire.",
             'username.unique' => "Le nom d'utilisateur est déjà pris.",
             'email.required' => "L'email est obligatoire.",
@@ -36,19 +47,58 @@ class AuthController extends Controller
             'password.confirmed' => 'La confirmation du mot de passe ne correspond pas.',
         ]);
 
+
+        $picture = $request->file('picture');
+        $pictureName = pathinfo($picture->getClientOriginalName(), PATHINFO_FILENAME);
+        $pictureExtension = $picture->getClientOriginalExtension();
+        $pictureFullName = $pictureName . '_' . time() . '.' . $pictureExtension;
+        
+        // Enregistrez le fichier dans le dossier public/pictures
+        $picture->storeAs('profilPics', $pictureFullName, 'public');
+
         
         $user = User::create([
-            'name' => $request->input('name'),
+            'full_name' => $request->input('name'),
             'address' => $request->input('adress'),
-            'phone' => $request->input('phone'),
+            'picture' => $pictureFullName,
+            'phone_number' => $request->input('phone'),
             'city' => $request->input('city'),
             'username' => $request->input('username'),
             'email' => $request->input('email'),
-            'password' => $request->input('password'),
+            'password' => bcrypt($request->input('password')), 
         ]);
-
-
-        return redirect()->back()->with('success', "Commandes ajoutées avec succès");
-
+    
+        // Log the user in automatically
+        Auth::login($user);
+    
+        return redirect()->route('home.show')->with('success', 'Enregistrement réussi et connexion automatique.');
     }
+    
+
+    public function login(Request $request)
+    {
+        $credentials = request(['email', 'password']);
+
+        if (Auth::attempt($credentials, $request->filled('remember'))) {
+            $request->session()->regenerate();
+    
+            return redirect()->route('home.show');
+        }   
+        
+        return back()->withErrors([
+            'email' => 'Invalid email or password',
+        ]);
+        
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
+    }
+
 }
