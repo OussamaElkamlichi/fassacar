@@ -50,4 +50,14 @@ class clientViewsController extends Controller
         return view('Client_Pages.myAccount', compact('me'));
     }
   
+
+    public function showRegistrationForm()
+    {
+        return view('Auth.register');
+    }
+
+    public function showMap()
+    {
+        return view('Client_Pages.map');
+    }
 }

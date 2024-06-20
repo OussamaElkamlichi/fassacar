@@ -3,7 +3,7 @@
 
 <div class="no-bottom no-top" id="content">
     <div id="top"></div>
-    
+
     <!-- section begin -->
     <section id="subheader" class="jarallax text-light">
         <img src="{{ asset('client_assets/images/background/subheader.jpg') }}" class="jarallax-img" alt="">
@@ -19,16 +19,16 @@
             </div>
     </section>
     <!-- section close -->
-    
+
 
     <section aria-label="section">
         <div class="container">
                 <div class="row g-custom-x">
-                    
+
                     <div class="col-lg-8 mb-sm-30">
 
                      <h3>Do you have any question?</h3>
-                    
+
                         <form name="contactForm" id="contact_form" class="form-border" method="post" action="#">
                                 <div class="row">
                                     <div class="col-md-4 mb10">
@@ -47,7 +47,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                    
+
                                 <div class="field-set mb20">
                                     <textarea name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
                                 </div>
@@ -64,7 +64,7 @@
                                 </div>
                             </form>
                 </div>
-                
+
                 <div class="col-lg-4">
 
                     <div class="de-box mb30">
@@ -89,11 +89,14 @@
                     </div>
 
                 </div>
-                    
+
                 </div>
             </div>
 
     </section>
+
+    <!-- Example usage in a view -->
+    
 
 </div>
 @endsection

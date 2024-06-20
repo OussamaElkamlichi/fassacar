@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <title>Fassacar</title>
@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="assets/css/icons.css" />
     <link rel="stylesheet" href="assets/css/tailwind.css" />
+
     <!-- color scheme -->
     <link id="colors" href="{{ asset('client_assets/css/colors/scheme-01.css') }}" rel="stylesheet" type="text/css">
 </head>
@@ -173,16 +174,68 @@
                                     </li>
                                     @auth
                                         <li><a class="menu-item" href="/myAccount">My Account</a>
-                                            {{-- <ul>
-                                                <li><a class="menu-item" href="account-dashboard.html">Dashboard</a>
+                                            </ul>
+                                        </li>
+                                        <li><a class="menu-item" href="#">@lang('messages.pages')</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="about.html">About Us</a></li>
+                                                <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                                <li><a class="menu-item" href="login.html">Login</a></li>
+                                                <li><a class="menu-item" href="/register">Register</a></li>
+                                                <li><a class="menu-item" href="404.html">Page 404</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="menu-item" href="#">@lang('messages.news')</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="news-standart-right-sidebar.html">News
+                                                        Standard</a>
+                                                    <ul>
+                                                        <li><a class="menu-item"
+                                                                href="news-standart-right-sidebar.html">Right
+                                                                Sidebar</a></li>
+                                                        <li><a class="menu-item"
+                                                                href="news-standart-left-sidebar.html">Left Sidebar</a>
+                                                        </li>
+                                                        <li><a class="menu-item"
+                                                                href="news-standart-no-sidebar.html">No Sidebar</a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
-                                                <li><a class="menu-item" href="account-profile.html">My Profile</a>
+                                                <li><a class="menu-item" href="news-grid-right-sidebar.html">News
+                                                        Grid</a>
+                                                    <ul>
+                                                        <li><a class="menu-item"
+                                                                href="news-grid-right-sidebar.html">Right Sidebar</a>
+                                                        </li>
+                                                        <li><a class="menu-item"
+                                                                href="news-grid-left-sidebar.html">Left Sidebar</a>
+                                                        </li>
+                                                        <li><a class="menu-item" href="news-grid-no-sidebar.html">No
+                                                                Sidebar</a></li>
+                                                    </ul>
                                                 </li>
-                                                <li><a class="menu-item" href="account-booking.html">My Orders</a>
+                                            </ul>
+                                        </li>
+                                        <li><a class="menu-item" href="#">@lang('messages.elements')</a>
+                                            <ul>
+                                                <li><a class="menu-item" href="preloader.html">Preloader</a></li>
+                                                <li><a class="menu-item" href="icon-boxes.html">Icon Boxes</a></li>
+                                                <li><a class="menu-item" href="badge.html">Badge</a></li>
+                                                <li><a class="menu-item" href="counters.html">Counters</a></li>
+                                                <li><a class="menu-item" href="gallery-popup.html">Gallery Popup</a>
                                                 </li>
-                                                <li><a class="menu-item" href="account-favorite.html">My Favorite
-                                                        Cars</a></li>
-                                            </ul> --}}
+                                                <li><a class="menu-item" href="icons-elegant.html">Icons Elegant</a>
+                                                </li>
+                                                <li><a class="menu-item" href="icons-etline.html">Icons Etline</a>
+                                                </li>
+                                                <li><a class="menu-item" href="icons-font-awesome.html">Icons Font
+                                                        Awesome</a></li>
+                                                <li><a class="menu-item" href="map.html">Map</a></li>
+                                                <li><a class="menu-item" href="modal.html">Modal</a></li>
+                                                <li><a class="menu-item" href="popover.html">Popover</a></li>
+                                                <li><a class="menu-item" href="tabs.html">Tabs</a></li>
+                                                <li><a class="menu-item" href="tooltips.html">Tooltips</a></li>
+                                            </ul>
                                         </li>
                                     @endauth
                                     <li><a class="menu-item" href="#">Pages</a>
@@ -203,6 +256,10 @@
                                         <a href="/login" class="btn-main">Sign In</a>
                                         <span id="menu-btn"></span>
                                     </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <a href="/" class="btn-main">@lang('messages.sign In')</a>
+                                    <span id="menu-btn"></span>
                                 </div>
                             @endguest
 
@@ -220,12 +277,16 @@
                     </div>
                 </div>
             </div>
+
+            <nav>
+                <ul>
+                    <li><a href="{{ route('language.switch', 'en') }}">English</a></li>
+                    <li><a href="{{ route('language.switch', 'es') }}">Spanish</a></li>
+                </ul>
+            </nav>
+
         </header>
-        <!-- header close -->
-        {{-- @endif  --}}
-
-
-
+     
 
 
         @yield('authContent')
