@@ -1,5 +1,5 @@
 @extends('admin.layout')
-@section('Content')
+@section('adminContent')
 
     <div class="container  mx-auto px-2">        
         <div class="flex flex-wrap">

@@ -1,5 +1,5 @@
 @extends('admin.layout')
-@section('Content')
+@section('adminContent')
 
 
 
