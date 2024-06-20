@@ -20,7 +20,7 @@
                                 </ol>
                             </div>
                             <div class="flex items-center">
-                                <button class="px-3 py-2 lg:px-4 bg-blue-500 text-white text-sm font-semibold rounded hover:bg-blue-600">Create New</button>
+                                <a href="{{route('create.form')}}" class="px-3 py-2 lg:px-4 bg-blue-500 text-white text-sm font-semibold rounded hover:bg-blue-600">Create New</a>
                             </div>
                         </div>
                     </div>
@@ -72,8 +72,8 @@
                                     <i class="ti ti-clock text-3xl"></i>                        
                                 </div>
                                 <div class="self-center ml-auto">                            
-                                    <h3 class="my-1 font-semibold text-2xl dark:text-slate-200">01<span class="text-sm text-slate-500">m</span>03<span class="text-sm text-slate-500">s</span></h3>
-                                    <p class="text-gray-400 mb-0 font-medium">Avg.Sessions</p>
+                                    <h3 class="my-1 font-semibold text-2xl dark:text-slate-200">{{$cars}}</h3>
+                                    <p class="text-gray-400 mb-0 font-medium">Cars</p>
                                 </div>
                             </div>
                         </div> <!--end inner-grid--> 
@@ -85,8 +85,8 @@
                                     <i class="ti ti-activity text-3xl"></i>                        
                                 </div>
                                 <div class="self-center ml-auto">                            
-                                    <h3 class="my-1 font-semibold text-2xl dark:text-slate-200">$1800</h3>
-                                    <p class="text-gray-400 mb-0 font-medium">Bounce Rate</p>
+                                    <h3 class="my-1 font-semibold text-2xl dark:text-slate-200">{{$totalusers}}</h3>
+                                    <p class="text-gray-400 mb-0 font-medium">Users</p>
                                 </div>
                             </div>
                         </div> <!--end inner-grid--> 
@@ -114,7 +114,7 @@
                 </div> <!--end inner-grid--> 
             </div>
         </div> 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
+        {{-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
             <div class="sm:col-span-1  md:col-span-1 lg:col-span-1 xl:col-span-1 ">
                 <div class="card overflow-hidden">
                     <div class="card-header">
@@ -514,9 +514,9 @@
                     </div>
                 </div> <!--end inner-grid-->
             </div>
-        </div>  
+        </div>   --}}
         <!-- footer -->
-        <div class="absolute bottom-0 left-2 right-2 block print:hidden">
+        {{-- <div class="absolute bottom-0 left-2 right-2 block print:hidden">
           <div class="container mx-auto">
             <!-- Footer Start -->
             <footer
@@ -537,15 +537,6 @@
         </div>
 
     
-    </div><!--end container-->
+    </div> --}}
 
-    
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/chart.js/chart.min.js"></script>
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/libs/echarts/echarts.min.js"></script>
-    <script src="assets/js/pages/analytics-index.init.js"></script>
-    <script src="assets/js/app.js"></script>
-</body>
-
-</html>
+    @endsection 

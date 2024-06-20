@@ -75,19 +75,20 @@
      
                         </div>
 
-                        <form action="{{route('create')}}" id="myform" method="post" onsubmit = "return validate();" enctype="multipart/form-data">
+                        <form action="{{route('car.update', $car->id)}}" id="myform" method="post" onsubmit = "return validate();">
                           @csrf
+                          @method('put')
                             <div class="mb-2 input_field">
                                 <label for="name" class="mb-2 label">Type</label>
-                                <input class="form-control" type="text" id="name" name="type" placeholder="type">
+                                <input class="form-control" type="text" id="name" name="type" placeholder="type" value="{{ $car->title }}">
                             </div>
                             <div class="mb-2 input_field">
                                 <label for="Seats" class="mb-2 label">Seats</label>
-                                <input class="form-control" type="number" id="Seats"  name="seats" placeholder="Seats">
+                                <input class="form-control" type="number" id="Seats"  name="seats" placeholder="Seats" value="{{ $car->title }}">
                             </div>
                             <div class="mb-2 input_field">
                               <label for="doors" class="mb-2 label">Doors</label>
-                              <input class="form-control" type="number" id="doors"  name="doors" placeholder="Seats">
+                              <input class="form-control" type="number" id="doors"  name="doors" placeholder="Seats" value="{{ $car->title }}">
                           </div>
                             <div class="mb-2 input_field">
                                 <label for="phone" class="mb-2 label">Transmission</label>
@@ -107,23 +108,23 @@
                             </div>
                             <div class="mb-2 input_field">
                               <label for="email" class="mb-2 label">Model</label>
-                              <input class="form-control" type="text" id="model"  name="model" placeholder="model">
+                              <input class="form-control" type="text" id="model"  name="model" placeholder="model" value="{{ $car->title }}">
                           </div>
                           <div class="mb-2 input_field">
                             <label for="email" class="mb-2 label">Year</label>
-                            <input class="form-control" type="number" id="year"    name="year" placeholder="year">
+                            <input class="form-control" type="number" id="year"    name="year" placeholder="year" value="{{ $car->title }}">
                         </div>
                         <div class="mb-2 input_field">
                           <label for="email" class="mb-2 label">Body type</label>
-                          <input class="form-control" type="text" id="body_type"  name="body_type" placeholder="body type">
+                          <input class="form-control" type="text" id="body_type"  name="body_type" placeholder="body type" value="{{ $car->title }}">
                       </div>
                       <div class="mb-2 input_field">
                         <label for="email" class="mb-2 label">Color</label>
-                        <input class="form-control" type="text" id="color"  name="color" placeholder="color">
-                    </div>
+                        <input class="form-control" type="text" id="color"  name="color" placeholder="color" value="{{ $car->title }}">
+                    </div>car
                     <div class="mb-2 input_field">
                       <label for="email" class="mb-2 label">Luggage</label>
-                      <input class="form-control" type="number" id="luggage"  name="luggage" placeholder="luggage">
+                      <input class="form-control" type="number" id="luggage"  name="luggage" placeholder="luggage" value="{{ $car->title }}">
                   </div>
                   <div class="mb-2 input_field">
                     <label for="available" class="mb-2 label">Available</label>
@@ -134,18 +135,12 @@
                 </div>
                 <div class="mb-2 input_field">
                   <label for="price" class="mb-2 label">Price</label>
-                  <input class="form-control"type="number" step="any" id="price"  name="price" placeholder="price">
+                  <input class="form-control"type="number" step="any" id="price"  name="price" placeholder="price" value="{{ $car->title }}">
               </div>
                           <div class="input_field mb-2">
                             <label for="massage" class="mb-2 label">Description</label>
-                            <textarea id="message" rows="4"  name="description" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                            <textarea id="message" rows="4"  name="description" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..." value="{{ $car->title }}"></textarea>
                           </div>
-
-                          <div class="mb-2 input_field">
-                            <label for="image" class="mb-2 label">Image</label>
-                            <input class="form-control" type="file" accept="image/*" id="image"  name="image" >
-                        </div>
-
                           <button type="submit" class="px-3 py-2 lg:px-4 bg-blue-500 text-white text-sm font-semibold rounded hover:bg-blue-600">Create</button>
                         </form>
                     </div><!--end card-body-->
@@ -158,6 +153,4 @@
     
     </div>
 
-    
-    
-    @endsection 
+@endsection 

@@ -20,30 +20,25 @@
                 </div>
         </section>
         <!-- section close -->
-
+ @if ($car)
         <section id="section-car-details">
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-6">
                         <div id="slider-carousel" class="owl-carousel">
                             <div class="item">
-                                <img src="{{ asset('client_assets/images/car-single/1.jpg') }}" alt="">
+                                <img src="{{asset('images/' . $car->image) }}" alt="">
                             </div>
-                            <div class="item">
-                                <img src="{{ asset('client_assets/images/car-single/2.jpg') }}" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="{{ asset('client_assets/images/car-single/3.jpg') }}" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="{{ asset('client_assets/images/car-single/4.jpg') }}" alt="">
-                            </div>
+                           
                         </div>
                     </div>
-
+                    
+ 
+      
+  
                     <div class="col-lg-3">
-                        <h3>BMW M2 2020</h3>
-                        <p>The BMW M2 is the high-performance version of the 2 Series 2-door coupé. The first generation of the M2 is the F87 coupé and is powered by turbocharged.</p>
+                        <h3>{{$car->model}}</h3>
+                        <p>{{$car->description}}</p>
 
                         <div class="spacer-10"></div>
 
@@ -51,56 +46,56 @@
                         <div class="de-spec">
                             <div class="d-row">
                                 <span class="d-title">Body</span>
-                                <spam class="d-value">Sedan</spam>
+                                <spam class="d-value">{{$car->body_type}}</spam>
                             </div>
                             <div class="d-row">
                                 <span class="d-title">Seat</span>
-                                <spam class="d-value">2 seats</spam>
+                                <spam class="d-value">{{$car->seats}}</spam>
                             </div>
                             <div class="d-row">
                                 <span class="d-title">Door</span>
-                                <spam class="d-value">2 doors</spam>
+                                <spam class="d-value">{{$car->doors}}</spam>
                             </div>
                             <div class="d-row">
                                 <span class="d-title">Luggage</span>
-                                <spam class="d-value">150</spam>
+                                <spam class="d-value">{{$car->luggage}}</spam>
                             </div>
                             <div class="d-row">
                                 <span class="d-title">Fuel Type</span>
-                                <spam class="d-value">Hybird</spam>
+                                <spam class="d-value">{{$car->fuel}}</spam>
                             </div>
-                            <div class="d-row">
+                            {{-- <div class="d-row">
                                 <span class="d-title">Engine</span>
                                 <spam class="d-value">3000</spam>
-                            </div>
+                            </div> --}}
                             <div class="d-row">
                                 <span class="d-title">Year</span>
-                                <spam class="d-value">2020</spam>
+                                <spam class="d-value">{{$car->year}}</spam>
                             </div>
-                            <div class="d-row">
+                            {{-- <div class="d-row">
                                 <span class="d-title">Mileage</span>
                                 <spam class="d-value">200</spam>
-                            </div>
+                            </div> --}}
                             <div class="d-row">
                                 <span class="d-title">Transmission</span>
-                                <spam class="d-value">Automatic</spam>
+                                <spam class="d-value">{{$car->transmission}}</spam>
                             </div>
-                            <div class="d-row">
+                            {{-- <div class="d-row">
                                 <span class="d-title">Drive</span>
                                 <spam class="d-value">4WD</spam>
-                            </div>
-                            <div class="d-row">
+                            </div> --}}
+                            {{-- <div class="d-row">
                                 <span class="d-title">Fuel Economy</span>
                                 <spam class="d-value">18.5</spam>
-                            </div>
+                            </div> --}}
                             <div class="d-row">
                                 <span class="d-title">Exterior Color</span>
-                                <spam class="d-value">Blue Metalic</spam>
+                                <spam class="d-value">{{$car->color}}</spam>
                             </div>
-                            <div class="d-row">
+                            {{-- <div class="d-row">
                                 <span class="d-title">Interior Color</span>
                                 <spam class="d-value">Black</spam>
-                            </div>
+                            </div> --}}
                         </div>
 
                         <div class="spacer-single"></div>
@@ -117,7 +112,8 @@
                     <div class="col-lg-3">
                         <div class="de-price text-center">
                             Daily rate
-                            <h3>$265</h3>
+                            <h4>{{$car->price}} MAD</h4>
+                            
                         </div>
                         <div class="spacer-30"></div>
                         <div class="de-box mb25">
@@ -288,9 +284,12 @@
                 </div>
             </div>
         </section>
-        
+        @else
+    <p>Car not found.</p>
+@endif
         
     </div>
     <!-- content close -->
 
 @endsection
+

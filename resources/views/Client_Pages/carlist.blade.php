@@ -189,7 +189,7 @@
                         <div class="col-lg-12">
                             <div class="de-item-list mb30">
                                 <div class="d-img">
-                                    <img src="{{asset('client_assets/images/cars/jeep-renegade.jpg')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('images/' . $car->image) }}"  class="img-fluid" alt="">
                                 </div>
                                 <div class="d-info">
                                     <div class="d-text">
@@ -209,8 +209,8 @@
                                     </div>
                                 </div>
                                 <div class="d-price">
-                                    Daily rate from <span>${{$car->price}}</span>
-                                    <a class="btn-main" href="car-single.html">Rent Now</a>
+                                    Daily rate from <span>{{$car->price}} MAD</span>
+                                    <a href="{{ route('details', ['id' => $car->id]) }}" class="btn-main" >Read more</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>

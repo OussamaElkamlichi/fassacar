@@ -11,25 +11,23 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('created_by');
-            $table->unsignedBigInteger('car_id');
-            $table->unsignedBigInteger('coupon_id')->nullable();  // Making coupon_id nullable
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+        
+            $table->foreignId('car_id')->nullable()->constrained('cars'); // Corrected the constrained() method
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Corrected the constrained() method
+            $table->foreignId('coupon_id')->nullable()->constrained()->onDelete('set null'); // Corrected the constrained() method
+            $table->date('start_date');
+            $table->date('end_date');
             $table->string('picking_up_location');
-            $table->string('returning_location')->nullable();
-            $table->decimal('cost', 10, 2);
-            $table->decimal('total_cost', 10, 2);
+            $table->string('returning_location');
+            $table->decimal('cost', 8, 2);
+            $table->decimal('total_cost', 8, 2);
             $table->enum('status', ['pending', 'confirmed', 'cancelled'])->default('pending');
-            $table->enum('payment_method', ['credit_card', 'debit_card', 'cash'])->nullable();
+            $table->string('payment_method');
             $table->timestamps();
 
-            // Adding foreign key constraints
-            $table->foreign('created_by')->references('id')->on('users');
-            $table->foreign('car_id')->references('id')->on('cars');
-            $table->foreign('coupon_id')->references('id')->on('coupons');
+            $table->index('car_id');
         });
+
     }
 
     /**

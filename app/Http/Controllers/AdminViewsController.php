@@ -18,6 +18,14 @@ class AdminViewsController extends Controller
 
     return view('admin.create', compact('transmissionOptions', 'fuelOptions'));
 
-
    }
+
+
+   public function adminCarlist(){
+
+    return view('admin.adminCarslist');
+
+}
+
+
 }

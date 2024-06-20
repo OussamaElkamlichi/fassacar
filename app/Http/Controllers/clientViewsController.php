@@ -37,9 +37,14 @@ class clientViewsController extends Controller
     } 
 
     public function show(){
-        $cars = car::all();
+        $cars = Car::all();
          return view('Client_Pages.carlist',compact('cars'));
     
        }
-  
+    public function details($id){
+        
+        $car = Car::findOrFail($id);
+        // dd($car);
+        return view('Client_Pages.descrptionPage',compact('car'));
+    }
 }

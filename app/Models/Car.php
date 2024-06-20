@@ -10,7 +10,7 @@ class Car extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'car_id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'seats',
@@ -25,7 +25,8 @@ class Car extends Model
         'color',
         'luggage',
         'available',
-        'price'
+        'price',
+        'image'
     ];
 
     public function reservations()
