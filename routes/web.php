@@ -72,13 +72,13 @@ Route::get('/booking', [clientViewsController::class, 'showBooking'])->name('boo
 Route::get('/contactUs', [clientViewsController::class, 'contactUs'])->name('contactUs.show');
 Route::get('/about', [clientViewsController::class, 'about'])->name('about.show');
 Route::get('/carlist', [clientViewsController::class, 'carlist'])->name('carlist.show');
-Route::get('lang/{locale}', 'App\Http\Controllers\LanguageController@switch')->name('lang.switch');
-Route::get('/{locale}/register', [clientViewsController::class, 'showRegistrationForm'])->name('register');
+// Route::get('lang/{locale}', 'App\Http\Controllers\LanguageController@switch')->name('lang.switch');
+// Route::get('/{locale}/register', [clientViewsController::class, 'showRegistrationForm'])->name('register');
 
 Route::get('/language/{locale}', [LanguageController::class, 'switch'])->name('language.switch');
 
 // Registration form route
-Route::get('/your-route', [LanguageController::class, 'yourMethod'])->name('your.route.name');
+// Route::get('/your-route', [LanguageController::class, 'yourMethod'])->name('your.route.name');
 
 Route::get('locale/{lang}', [LocaleController::class, 'setLocale']);
 Route::get('/map', [clientViewsController::class, 'showMap'])->name('account.map');

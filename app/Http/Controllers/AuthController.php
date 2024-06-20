@@ -34,7 +34,7 @@ class AuthController extends Controller
             'name.string' => 'Le nom doit être une chaîne de caractères.',
             'name.max' => 'Le nom ne peut pas dépasser 255 caractères.',
             'phone.required' => 'Le numéro de téléphone est obligatoire.',
-            'picture.required' => 'Le numéro de téléphone est obligatoire.',
+            'picture.required' => "La photo d'utilisateur est obligatoire.",
             'username.required' => "Le nom d'utilisateur est obligatoire.",
             'username.unique' => "Le nom d'utilisateur est déjà pris.",
             'email.required' => "L'email est obligatoire.",
@@ -47,14 +47,14 @@ class AuthController extends Controller
             'password.confirmed' => 'La confirmation du mot de passe ne correspond pas.',
         ]);
 
+
         $picture = $request->file('picture');
         $pictureName = pathinfo($picture->getClientOriginalName(), PATHINFO_FILENAME);
         $pictureExtension = $picture->getClientOriginalExtension();
         $pictureFullName = $pictureName . '_' . time() . '.' . $pictureExtension;
-
+        
         // Enregistrez le fichier dans le dossier public/pictures
-        $picture->storeAs('storage/profilPics', $pictureFullName, 'public');
-
+        $picture->storeAs('profilPics', $pictureFullName, 'public');
 
         
         $user = User::create([
@@ -65,14 +65,15 @@ class AuthController extends Controller
             'city' => $request->input('city'),
             'username' => $request->input('username'),
             'email' => $request->input('email'),
-            'password' => $request->input('password'),
+            'password' => bcrypt($request->input('password')), 
         ]);
-
-
-        return redirect()->back()->with('success', "ajoute avec succes");
-
+    
+        // Log the user in automatically
+        Auth::login($user);
+    
+        return redirect()->route('home.show')->with('success', 'Enregistrement réussi et connexion automatique.');
     }
-
+    
 
     public function login(Request $request)
     {
@@ -81,7 +82,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             $request->session()->regenerate();
     
-            return redirect()->route('homePage');
+            return redirect()->route('home.show');
         }   
         
         return back()->withErrors([
