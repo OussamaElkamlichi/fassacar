@@ -93,7 +93,7 @@
     </div><!--end col-->  
 
 
-    @yield('adminContent')
+    @yield('Content')
 
 
     <div class="absolute bottom-0 left-2 right-2 block print:hidden">

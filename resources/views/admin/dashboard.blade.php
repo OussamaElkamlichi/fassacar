@@ -1,6 +1,6 @@
 
-@extends('admin.layout')
-@section('Content')
+@extends('Layouts.adminLayout')
+@section('adminContent')
 
 
     <div class="container  mx-auto px-2">        
@@ -539,13 +539,4 @@
     
     </div><!--end container-->
 
-    
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/chart.js/chart.min.js"></script>
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/libs/echarts/echarts.min.js"></script>
-    <script src="assets/js/pages/analytics-index.init.js"></script>
-    <script src="assets/js/app.js"></script>
-</body>
-
-</html>
+@endsection

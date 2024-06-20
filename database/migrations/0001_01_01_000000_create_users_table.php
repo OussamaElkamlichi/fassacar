@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('email')->unique();
             $table->string('full_name');
+            $table->string('picture')->nullable()->default('anonyme.png');
             $table->string('phone_number')->nullable();
             $table->unsignedBigInteger('city')->nullable();
             $table->string('address')->nullable();

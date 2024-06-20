@@ -85,6 +85,14 @@
                                     </div>
                                 </div>
 
+                                <div class="">
+                                    <div class="field-set">
+                                        <label>Picture :</label>
+                                        <input type='file' name='password_confirmation' id='re-password'
+                                            class="form-control">
+                                    </div>
+                                </div>
+
 
                                 <section aria-label="section">
                                     <div class="container">
