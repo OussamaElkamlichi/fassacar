@@ -5,7 +5,7 @@
 <div class="no-bottom no-top" id="content">
     <div id="top"></div>
     <section id="section-hero" aria-label="section" class="jarallax">
-        <img src="{{ asset('client_assets/images/background/2.jpg') }}" class="jarallax-img" alt="">
+        <img src="images/background/2.jpg" class="jarallax-img" alt="">
         <div class="v-center">
             <div class="container">
                 <div class="row align-items-center">
@@ -31,11 +31,11 @@
                             <div class="row g-2">
                                 <div class="col-lg-6">
                                     <a class="btn-sc btn-fullwidth mb10" href="#"><img
-                                            src="{{ asset('client_assets/images/svg/google_icon.svg') }}" alt="">Google</a>
+                                            src="images/svg/google_icon.svg" alt="">Google</a>
                                 </div>
                                 <div class="col-lg-6">
                                     <a class="btn-sc btn-fullwidth mb10" href="#"><img
-                                            src="{{ asset('client_assets/images/svg/facebook_icon.svg') }}" alt="">Facebook</a>
+                                            src="images/svg/facebook_icon.svg" alt="">Facebook</a>
                                 </div>
                             </div>
                         </div>

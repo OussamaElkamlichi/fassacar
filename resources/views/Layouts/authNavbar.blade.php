@@ -3,7 +3,7 @@
 
 <head>
     <title>Rentaly - Multipurpose Vehicle Car Rental Website Template</title>
-    <link rel="icon" href="{{ asset('client_assets/images/icon.png') }}" type="image/gif" sizes="16x16">
+    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Rentaly - Multipurpose Vehicle Car Rental Website Template" name="description">
@@ -65,8 +65,8 @@
                                     <!-- logo begin -->
                                     <div id="logo">
                                         <a href="index.html">
-                                            <img class="logo-1" src="{{ asset('client_assets/images/logo-light.png') }}" alt="">
-                                            <img class="logo-2" src="{{ asset('client_assets/images/logo.png') }}" alt="">
+                                            <img class="logo-1" src="images/logo-light.png" alt="">
+                                            <img class="logo-2" src="images/logo.png" alt="">
                                         </a>
                                     </div>
                                     <!-- logo close -->
@@ -108,15 +108,15 @@
                                             <li><a class="menu-item" href="booking.html">Booking</a>
                                         </ul>
                                         </li>
-                                        <li><a class="menu-item" href="{{ route('account.dashboard') }}">My Account</a>
+                                        <li><a class="menu-item" href="account-dashboard.html">My Account</a>
                                             <ul>
-                                                <li><a class="menu-item" href="{{ route('account.dashboard') }}">Dashboard</a>
+                                                <li><a class="menu-item" href="account-dashboard.html">Dashboard</a>
                                                 </li>
-                                                <li><a class="menu-item" href="{{ route('account.profile') }}">My Profile</a>
+                                                <li><a class="menu-item" href="account-profile.html">My Profile</a>
                                                 </li>
-                                                <li><a class="menu-item" href="{{ route('account.booking') }}">My Orders</a>
+                                                <li><a class="menu-item" href="account-booking.html">My Orders</a>
                                                 </li>
-                                                <li><a class="menu-item" href="{{ ('account.favourite') }}">My Favorite
+                                                <li><a class="menu-item" href="account-favorite.html">My Favorite
                                                         Cars</a></li>
                                             </ul>
                                         </li>
@@ -174,7 +174,7 @@
                                                 </li>
                                                 <li><a class="menu-item" href="icons-font-awesome.html">Icons Font
                                                         Awesome</a></li>
-                                                <li><a class="menu-item" href="{{ route('account.map') }}">Map</a></li>
+                                                <li><a class="menu-item" href="map.html">Map</a></li>
                                                 <li><a class="menu-item" href="modal.html">Modal</a></li>
                                                 <li><a class="menu-item" href="popover.html">Popover</a></li>
                                                 <li><a class="menu-item" href="tabs.html">Tabs</a></li>
@@ -199,84 +199,6 @@
 
         @yield('authContent')
 
-
-
-               <a href="#" id="back-to-top"></a>
-        <!-- footer begin -->
-        <footer class="text-light">
-            <div class="container">
-                <div class="row g-custom-x">
-                    <div class="col-lg-3">
-                        <div class="widget">
-                            <h5>About Rentaly</h5>
-                            <p>Where quality meets affordability. We understand the importance of a smooth and enjoyable journey without the burden of excessive costs. That's why we have meticulously crafted our offerings to provide you with top-notch vehicles at minimum expense.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="widget">
-                            <h5>Contact Info</h5>
-                            <address class="s1">
-                                <span><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th St, New York, NY 10001</span>
-                                <span><i class="id-color fa fa-phone fa-lg"></i>+1 333 9296</span>
-                                <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="mailto:contact@example.com">contact@example.com</a></span>
-                                <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Download Brochure</a></span>
-                            </address>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <h5>Quick Links</h5>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="widget">
-                                    <ul>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Careers</a></li>
-                                        <li><a href="#">News</a></li>
-                                        <li><a href="#">Partners</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="widget">
-                            <h5>Social Network</h5>
-                            <div class="social-icons">
-                                <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-rss fa-lg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="subfooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="de-flex">
-                                <div class="de-flex-col">
-                                    <a href="index.html">
-                                        Copyright 2024 - Rentaly by Designesia
-                                    </a>
-                                </div>
-                                <ul class="menu-simple">
-                                    <li><a href="#">Terms &amp; Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer close -->
         <!-- Javascript Files
         ================================================== -->
         <script src="{{ asset('client_assets/js/plugins.js') }}"></script>
