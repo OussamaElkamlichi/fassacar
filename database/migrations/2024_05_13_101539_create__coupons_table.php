@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('coupon_id');
             $table->string('coupon_code')->unique();
             $table->unsignedTinyInteger('discount_percent');
-            $table->date('expiration_date');
+            $table->dateTime('expiration_date');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });

@@ -14,17 +14,17 @@ return new class extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->id('car_id');
             $table->integer('seats');
-            $table->enum('transmission', ['manual', 'automatic']);
+            $table->enum('transmission', ['automatic', 'manual']);
             $table->integer('doors');
-            $table->float('mpg');
-            $table->text('description');
+            $table->integer('mpg');
+            $table->text('description')->nullable();
             $table->integer('trips')->default(0);
             $table->string('make');
             $table->string('model');
             $table->year('year');
             $table->text('features')->nullable();
-            $table->string('type');
-            $table->string('color');
+            $table->string('type')->nullable();
+            $table->string('color')->nullable();
             $table->string('license_plate')->unique();
             $table->boolean('available')->default(true);
             $table->timestamps();

@@ -15,27 +15,24 @@ class clientViewsController extends Controller
     {
         return view('Client_Pages.descrptionPage');
     }
-    public function showAccountDashboard()
+
+    public function showBooking()
     {
-        return view('Client_Pages.accountdashboard');
-    }
-    public function showAccountBooking()
-    {
-        return view('Client_Pages.accountBooking');
+        return view('Client_Pages.booking');
     }
 
-    public function showAccountProfile()
+    public function contactUs()
     {
-        return view('Client_Pages.accountProfile');
+        return view('Client_Pages.contactUs');
     }
 
-    public function showAccountFavourite()
+    public function about()
     {
-        return view('Client_Pages.accountFavourite');
+        return view('Client_Pages.about');
     }
 
-    public function showMap()
+    public function carlist()
     {
-        return view('Client_Pages.map');
+        return view('Client_Pages.carlist');
     }
 }

@@ -10,16 +10,20 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
+    { 
         Schema::create('reviews', function (Blueprint $table) {
-            $table->id('review_id');
-            $table->foreignId('user_id')->constrained('users', 'user_id');
-            $table->foreignId('car_id')->constrained('cars', 'car_id');
-            $table->unsignedTinyInteger('rating');
-            $table->text('comment')->nullable();
-            $table->timestamp('review_date');
-            $table->timestamps();
-        });
+       
+        $table->id('review_id');
+        $table->foreignId('user_id')->constrained('users');
+        $table->foreignId('car_id')->constrained('cars');
+        $table->unsignedTinyInteger('rating');
+        $table->text('comment')->nullable();
+        $table->dateTime('review_date');
+        $table->timestamps();
+
+        $table->index('user_id');
+        $table->index('car_id');
+    });
     }
 
     /**
